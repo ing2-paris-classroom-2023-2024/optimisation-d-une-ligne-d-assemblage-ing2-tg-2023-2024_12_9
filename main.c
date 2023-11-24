@@ -5,9 +5,13 @@
 #include "temps_de_cycle.h"
 #include "exclusion.h"
 #include "precedence.h"
-
+#include "structure.h"
+#include "menudelancement.h"
 int main()
 {
-    printf("Hello, World!\n");
+    int choix;
+    do {
+        choix = menu_de_lancement();
+    } while (choix == 0);
     return 0;
 }

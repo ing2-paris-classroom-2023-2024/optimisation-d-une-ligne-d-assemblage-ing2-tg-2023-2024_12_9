@@ -21,10 +21,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="hiérachisation du code">
-      <change afterPath="$PROJECT_DIR$/structure.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/structure.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menudelancement.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menudelancement.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +99,7 @@
       <updated>1700394967319</updated>
       <workItem from="1700394969262" duration="883000" />
       <workItem from="1700411257124" duration="121000" />
-      <workItem from="1700835286544" duration="999000" />
+      <workItem from="1700835286544" duration="1425000" />
     </task>
     <task id="LOCAL-00001" summary="hiérachisation du code">
       <option name="closed" value="true" />
@@ -115,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700836123929</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="hiérachisation du code">
+      <option name="closed" value="true" />
+      <created>1700836305801</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700836305801</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

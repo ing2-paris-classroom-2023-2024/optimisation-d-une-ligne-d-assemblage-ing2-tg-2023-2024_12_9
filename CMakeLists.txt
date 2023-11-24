@@ -12,4 +12,6 @@ add_executable(optimisation_d_une_ligne_d_assemblage_td12_grp9
         temps_de_cycle.c
         temps_de_cycle.h
         structure.c
-        structure.h)
+        structure.h
+        menudelancement.c
+        menudelancement.h)
