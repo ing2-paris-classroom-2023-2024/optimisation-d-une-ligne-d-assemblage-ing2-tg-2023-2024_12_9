@@ -10,4 +10,6 @@ add_executable(optimisation_d_une_ligne_d_assemblage_td12_grp9
         precedence.c
         precedence.h
         temps_de_cycle.c
-        temps_de_cycle.h)
+        temps_de_cycle.h
+        structure.c
+        structure.h)
