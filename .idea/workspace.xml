@@ -20,13 +20,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="hiérachisation du code">
-      <change afterPath="$PROJECT_DIR$/menudelancement.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/menudelancement.h" afterDir="false" />
+    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="ajout du menu de lancement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +94,7 @@
       <updated>1700394967319</updated>
       <workItem from="1700394969262" duration="883000" />
       <workItem from="1700411257124" duration="121000" />
-      <workItem from="1700835286544" duration="1425000" />
+      <workItem from="1700835286544" duration="2209000" />
     </task>
     <task id="LOCAL-00001" summary="hiérachisation du code">
       <option name="closed" value="true" />
@@ -125,7 +120,31 @@
       <option name="project" value="LOCAL" />
       <updated>1700836305801</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ajout du menu de lancement">
+      <option name="closed" value="true" />
+      <created>1700836985649</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700836985649</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ajout du menu de lancement">
+      <option name="closed" value="true" />
+      <created>1700836999423</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700836999423</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ajout du menu de lancement">
+      <option name="closed" value="true" />
+      <created>1700837100471</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700837100471</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +170,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="hiérachisation du code" />
-    <option name="LAST_COMMIT_MESSAGE" value="hiérachisation du code" />
+    <MESSAGE value="ajout du menu de lancement" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout du menu de lancement" />
   </component>
 </project>
