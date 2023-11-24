@@ -20,8 +20,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="ajout du menu de lancement">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="ajout elément de création de graph">
+      <change beforePath="$PROJECT_DIR$/structure.c" beforeDir="false" afterPath="$PROJECT_DIR$/structure.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temps_de_cycle.c" beforeDir="false" afterPath="$PROJECT_DIR$/temps_de_cycle.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +65,7 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/audri/Downloads/ProjetLabyrinthe4V3",
+    "last_opened_file_path": "C:/Users/audri/CLionProjects/TP3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,7 +95,7 @@
       <updated>1700394967319</updated>
       <workItem from="1700394969262" duration="883000" />
       <workItem from="1700411257124" duration="121000" />
-      <workItem from="1700835286544" duration="2209000" />
+      <workItem from="1700835286544" duration="3393000" />
     </task>
     <task id="LOCAL-00001" summary="hiérachisation du code">
       <option name="closed" value="true" />
@@ -144,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700837100471</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ajout elément de création de graph">
+      <option name="closed" value="true" />
+      <created>1700838186892</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700838186892</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +180,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="hiérachisation du code" />
     <MESSAGE value="ajout du menu de lancement" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout du menu de lancement" />
+    <MESSAGE value="ajout elément de création de graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout elément de création de graph" />
   </component>
 </project>

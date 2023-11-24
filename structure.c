@@ -5,7 +5,15 @@
 #include "structure.h"
 #include <stdio.h>
 #define SIZE 16
-
+// fonction qui prend en paramètre une chaine de caractère et ouvre le fichier correspondant
+FILE* ouvrirFichier(char* nomFichier){
+    FILE* fichier = fopen(nomFichier,"r");
+    if(fichier == NULL){
+        printf("Erreur lors de l'ouverture du fichier\n");
+        exit(-1);
+    }
+    return fichier;
+}
 void triABulles(Graphe* graphe, Graphe * arbre, int nombreArcsGraphe){
     int size = graphe->ordre;
     const int taille = nombreArcsGraphe;
