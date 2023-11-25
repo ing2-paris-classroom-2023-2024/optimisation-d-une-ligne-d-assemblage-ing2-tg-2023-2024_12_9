@@ -73,7 +73,7 @@ Graphe* CreerGraphe(int ordre)
         Newgraphe->pSommet[i]->couleur='B';
         Newgraphe->pSommet[i]->arc=NULL;
         Newgraphe->pSommet[i]->predecesseur=NULL;
-        Newgraphe->pSommet[i]->distance=10000;
+        Newgraphe->pSommet[i]->distance=-1;
     }
     return Newgraphe;
 }

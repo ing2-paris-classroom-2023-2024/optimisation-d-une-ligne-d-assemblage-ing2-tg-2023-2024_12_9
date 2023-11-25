@@ -20,9 +20,29 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="ajout elément de création de graph">
+    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="ajout du menu de lancement">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-2249fa6c80c1020baa73.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-7969eef318d6e8371665.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-f7e83760c065b9af5c21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-24T14-32-44-0036.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/exclusion.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/main.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/menudelancement.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/precedence.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/structure.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/temps_de_cycle.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exclusion.h" beforeDir="false" afterPath="$PROJECT_DIR$/exclusion.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/precedence.c" beforeDir="false" afterPath="$PROJECT_DIR$/precedence.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/precedences/precedences.txt" beforeDir="false" afterPath="$PROJECT_DIR$/precedences/precedences.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/structure.c" beforeDir="false" afterPath="$PROJECT_DIR$/structure.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temps_de_cycle.c" beforeDir="false" afterPath="$PROJECT_DIR$/temps_de_cycle.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +54,11 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -44,9 +69,9 @@
     <option name="majorVersion" value="2022" />
     <option name="minorVersion" value="2.3" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2YOS7mcTt2L8abUwKdC8sU6Qgpu" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -65,7 +90,9 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/audri/CLionProjects/TP3",
+    "git-widget-placeholder": "mateo",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Travail/ECE 2023-24/Matieres_principales/Algo/Semestre1/Projet/optimisation-d-une-ligne-d-assemblage-td12_grp9/precedence.c",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,17 +100,23 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="C/C++ File.precedence.c - MinGW">
     <configuration name="optimisation_d_une_ligne_d_assemblage_td12_grp9" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9" TARGET_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9" RUN_TARGET_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="precedence.c - MinGW" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9" TARGET_NAME="precedence.c - MinGW" CONFIG_NAME="precedence.c - MinGW">
+      <option name="sourceFile" value="C:\Travail\ECE 2023-24\Matieres_principales\Algo\Semestre1\Projet\optimisation-d-une-ligne-d-assemblage-td12_grp9\precedence.c" />
+      <option name="toolchainName" value="MinGW" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="C/C++ File.precedence.c - MinGW" />
+      <item itemvalue="CMake Application.optimisation_d_une_ligne_d_assemblage_td12_grp9" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -96,6 +129,8 @@
       <workItem from="1700394969262" duration="883000" />
       <workItem from="1700411257124" duration="121000" />
       <workItem from="1700835286544" duration="3393000" />
+      <workItem from="1700906096958" duration="3667000" />
+      <workItem from="1700912971471" duration="4098000" />
     </task>
     <task id="LOCAL-00001" summary="hiérachisation du code">
       <option name="closed" value="true" />

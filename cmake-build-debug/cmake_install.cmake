@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/audri/CLionProjects/optimisation-d-une-ligne-d-assemblage-td12_grp9
+# Install script for directory: C:/Travail/ECE 2023-24/Matieres_principales/Algo/Semestre1/Projet/optimisation-d-une-ligne-d-assemblage-td12_grp9
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/audri/CLionProjects/optimisation-d-une-ligne-d-assemblage-td12_grp9/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Travail/ECE 2023-24/Matieres_principales/Algo/Semestre1/Projet/optimisation-d-une-ligne-d-assemblage-td12_grp9/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
