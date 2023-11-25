@@ -7,6 +7,7 @@
 #include "precedence.h"
 #include "structure.h"
 #include "menudelancement.h"
+/*
 int main()
 {
     int choix;
@@ -14,4 +15,8 @@ int main()
         choix = menu_de_lancement();
     } while (choix == 0);
     return 0;
+}
+ */
+int main(){
+    precedences();
 }

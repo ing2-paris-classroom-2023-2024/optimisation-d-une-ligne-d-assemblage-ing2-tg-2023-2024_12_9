@@ -11,4 +11,12 @@
 
 #include "structure.h"
 
+Graphe * lireGraphePrecedence(FILE* nomFichier);
+void printLongestPath(Graphe * g, int depart, int arrivee);
+void boucleDFSdijkstra(pSommet sommet_actuel, Graphe * g);
+void ParcoursDijkstra(int depart, int arrivee, Graphe * graphe);
+int precedences();
+
+
+
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_TD12_GRP9_PRECEDENCE_H

@@ -5,7 +5,7 @@
 
 #include "precedence.h"
 
-Graphe * lireGraphePrecedence(char * nomFichier)
+Graphe * lireGraphePrecedence(FILE * nomFichier)
 {
     Graphe* graphe;
     FILE * ifs = fopen(nomFichier,"r");
@@ -116,14 +116,15 @@ void ParcoursDijkstra(int depart, int arrivee, Graphe * graphe){
     printLongestPath(graphe,depart,arrivee);
 }
 
-void main(){
+int precedences(){
     Graphe * g;
     int depart, arrivee;
-    g=lireGraphePrecedence("precedence.txt");
+    g=lireGraphePrecedence("../precedences/precedences.txt");
     printf("Entrez le sommet de départ : ");
     scanf("%d",&depart);
     printf("Entrez le sommet d'arrivée : ");
     scanf("%d",&arrivee);
     ParcoursDijkstra(depart,arrivee,g);
+    return 0;
 }
 
