@@ -42,6 +42,23 @@ void remplirTache(listeTache *liste, char *nomFichier)
     fclose(fichier);
 }
 
+int remplir_temps_de_cycle(char *nomFichier)
+{
+    FILE *fichier = fopen(nomFichier, "r");
+    if (fichier == NULL)
+    {
+        printf("Erreur lors de l'ouverture du fichier\n");
+        exit(EXIT_FAILURE);
+    }
+    int a;
+    char l[100];
+    fseek(fichier, 0, SEEK_SET);
+    fgets(l, 100, fichier);
+    fclose(fichier);
+    a = atoi(l);
+    return a;
+}
+
 // fonction qui affiche la liste de tâche
 void afficherTache(listeTache *liste)
 {

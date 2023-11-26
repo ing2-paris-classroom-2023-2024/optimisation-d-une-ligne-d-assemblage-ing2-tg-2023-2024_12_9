@@ -18,7 +18,8 @@ int main()
     remplirTache(&liste, "../operation/operations.txt");
     afficherTache(&liste);
     printf("\n");
-    tempsdecycle(&liste, 10);
+    printf("Temps de cycle : %d\n", remplir_temps_de_cycle("../temps/temps_cycle.txt"));
+    tempsdecycle(&liste, remplir_temps_de_cycle("../temps/temps_cycle.txt"));
     afficherTache(&liste);
     int choix;
     /*
