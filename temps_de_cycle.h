@@ -29,4 +29,5 @@ void fusiontache(tache *t1, tache *t2);
 void triInsertion(tache *tab, int taille);
 void tempsdecycle(listeTache *liste,int temps);
 void afficherliste(listeTache *liste);
+void remplirTache(listeTache *liste, char *nomFichier);
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_TD12_GRP9_TEMPS_DE_CYCLE_H

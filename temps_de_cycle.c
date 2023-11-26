@@ -4,7 +4,45 @@
 
 #include "temps_de_cycle.h"
 
+// fonction qui remplie la liste de tâche à partir d'un fichier
+void remplirTache(listeTache *liste, char *nomFichier)
+{
+    FILE *fichier = fopen(nomFichier, "r");
+    if (fichier == NULL)
+    {
+        printf("Erreur lors de l'ouverture du fichier\n");
+        exit(EXIT_FAILURE);
+    }
+    // Compter le nombre de lignes
+    int taille = 0;
+    int caractere;
 
+    while ((caractere = fgetc(fichier)) != EOF) {
+        if (caractere == '\n') {
+            taille++;
+        }
+    }
+    fseek(fichier, 0, SEEK_SET);
+    // Allocation dynamique pour le tableau de tâche
+    liste->tache = malloc(taille * sizeof(tache));
+    liste->taille = taille;
+    printf("Taille : %d\n", taille);
+    char ligne[100];
+    int i = 0;
+    while (fgets(ligne, 100, fichier) != NULL)
+    {
+        char *token = strtok(ligne, " ");
+        liste->tache[i].numero = malloc(sizeof(int));
+        liste->tache[i].tailleNum = 1;
+        liste->tache[i].numero[0] = (int) atoi(token);
+        token = strtok(NULL, " ");
+        liste->tache[i].temps = atof(token) * 1000;
+        i++;
+    }
+    fclose(fichier);
+}
+
+// fonction qui affiche la liste de tâche
 void afficherTache(listeTache *liste)
 {
 
@@ -136,12 +174,13 @@ void fusiontache(tache *t1, tache *t2)
 void tempsdecycle(listeTache *liste, int temps)
 {
     int compteur = liste->taille - 1;
+    int tempsConv = temps * 1000;
+    printf("\n");
     printf("Temps : %d\n", temps);
     triInsertion(liste->tache, liste->taille);
-
-    while (verifliste(liste->tache, liste->taille, temps))
+    while (verifliste(liste->tache, liste->taille, tempsConv))
     {
-        if ((liste->tache[0].temps + liste->tache[compteur].temps) <= temps)
+        if ((liste->tache[0].temps + liste->tache[compteur].temps) <= tempsConv)
         {
             fusiontache(&liste->tache[0], &liste->tache[compteur]);
 
