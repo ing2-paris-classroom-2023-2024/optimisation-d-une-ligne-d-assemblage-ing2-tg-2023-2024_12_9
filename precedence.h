@@ -11,11 +11,15 @@
 
 #include "structure.h"
 
-Graphe * lireGraphePrecedence(FILE* nomFichier);
-void printLongestPath(Graphe * g, int depart, int arrivee);
-void boucleDFSdijkstra(pSommet sommet_actuel, Graphe * g);
-void ParcoursDijkstra(int depart, int arrivee, Graphe * graphe);
-int precedences();
+
+
+Graphe * lireGraphePrecedence(char * nomFichier);
+Liste * CreerListe(pSommet sommet);
+void EnfilerSommet(Liste * Liste, pSommet sommetAEnfiler);
+int prochainPointDeDepart(Graphe * graphe);
+void DefilerSommetBFS(Liste * Liste);
+void parcoursBFS(Graphe* graphe);
+int ** precedences();
 
 
 

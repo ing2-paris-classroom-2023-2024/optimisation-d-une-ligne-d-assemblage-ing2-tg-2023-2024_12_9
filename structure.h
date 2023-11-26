@@ -37,6 +37,7 @@ struct Sommet
     int distance;
     int numero;
     char couleur;
+    int existe;
     int kruskal;
 };
 

@@ -5,7 +5,9 @@
 
 #include "precedence.h"
 
-Graphe * lireGraphePrecedence(FILE * nomFichier)
+
+
+Graphe * lireGraphePrecedence(char * nomFichier)
 {
     Graphe* graphe;
     FILE * ifs = fopen(nomFichier,"r");
@@ -50,81 +52,208 @@ Graphe * lireGraphePrecedence(FILE * nomFichier)
     return graphe;
 }
 
-void printLongestPath(Graphe * g, int depart, int arrivee)
+// ON PART PLUTÔT SUR UN BFS
+
+Liste * CreerListe(pSommet sommet){
+    pMaillon debut = (pMaillon) malloc(sizeof(struct Maillon));
+    pMaillon fin = (pMaillon) malloc(sizeof(struct Maillon));
+    Liste * Newliste = (Liste*) malloc(sizeof(Liste));
+    Newliste->tete = (struct Maillon*) malloc(sizeof(struct Maillon*));
+    Newliste->queue = (struct Maillon*) malloc(sizeof(struct Maillon*));
+    debut->sommet = sommet;
+    fin->sommet = sommet;
+    Newliste->tete = debut;
+    Newliste->queue = fin;
+    Newliste->tete->suivant = NULL;
+    Newliste->queue->suivant = NULL;
+    Newliste->longueur = 1;
+    return Newliste;
+}
+
+void EnfilerSommet(Liste * Liste, pSommet sommetAEnfiler){
+    pMaillon temp = NULL;
+    temp = Liste->tete;
+    while (temp->suivant != NULL){
+        // printf("temp = %d passe\n", temp->sommet->valeur);
+        temp = temp->suivant;
+
+    }
+    printf("temp = %d passe\n", temp->sommet->numero);
+    pMaillon NewMaillon = (pMaillon) malloc(sizeof(struct Maillon));
+    temp->suivant = NewMaillon;
+    NewMaillon->sommet = sommetAEnfiler;
+    NewMaillon->suivant = NULL;
+    Liste->longueur++;
+    printf("Sommet %d enfile\n", sommetAEnfiler->numero);
+
+}
+
+int prochainPointDeDepart(Graphe * graphe){
+    // printf("Entree dans la fonction prochainPointDeDepart\n");
+    for(int i = 0; i < graphe->ordre; i++){
+        if(graphe->pSommet[i]->existe == 1 && graphe->pSommet[i]->couleur == 'B'){
+            return i;
+        }
+    }
+    return -1;
+}
+
+void DefilerSommetBFS(Liste * Liste){
+    printf("Sommet %d defile\n", Liste->tete->sommet->numero);
+    pMaillon temp = Liste->tete;
+    Liste->longueur--;
+    Liste->tete = temp->suivant;
+
+    free(temp);
+}
+
+int compteurNombreMachines(Graphe * graphe){
+    int nombreMachines = 0;
+    for(int i = 0; i < graphe->ordre; i++){
+        printf("Sommet %d : %d\n", graphe->pSommet[i]->numero, graphe->pSommet[i]->distance);
+        if(graphe->pSommet[i]->distance > nombreMachines){
+            nombreMachines = graphe->pSommet[i]->distance;
+        }
+    }
+    printf("Nombre de machines : %d\n", nombreMachines);
+    return nombreMachines;
+}
+
+void affichageEnregistrementPrecedences(Graphe * graphe, int ** tableauPrecedences){
+
+    int nombreMachines = compteurNombreMachines(graphe);
+    // Initialisation du tableau, toutes les cases sont à 0
+    int tailleTableauPrecedences = graphe->ordre;
+    printf("Ordre du graphe : %d\n", tailleTableauPrecedences);
+    for(int i = 0; i < nombreMachines; i++){
+        for(int j = 0; j < tailleTableauPrecedences; j++){
+            tableauPrecedences[i][j] = 0;
+        }
+    }
+    printf("Initialisation terminee\n");
+    for(int tache = 0; tache < tailleTableauPrecedences; tache++) {
+        int machine = graphe->pSommet[tache]->distance;
+        tableauPrecedences[tache][machine] = 1;
+    }
+    printf("Affichage du tableau de precedences\n");
+    for(int i = 0; i < nombreMachines; i++){
+        printf("Machine %d : ", i);
+        for(int j = 0; j < tailleTableauPrecedences; j++){
+            printf("%d ", tableauPrecedences[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void parcoursBFS(Graphe* graphe)
 {
-    if(depart==arrivee)
-    {
-        printf("%d",depart);
-    }
-    else if(g->pSommet[arrivee]->predecesseur==NULL)
-    {
-        printf("Il n'existe pas de chemin entre %d et %d",depart,arrivee);
-    }
+
+    int sommet_initial;
+    printf("Entrez le sommet de depart : ");
+    scanf("%d",&sommet_initial);
+
+
+    printf("Graphe ");
+
+    if(graphe->orientation)
+        printf("oriente ");
     else
-    {
-        printLongestPath(g,depart,g->pSommet[arrivee]->predecesseur->numero);
-        printf("->%d",arrivee);
-    }
-}
+        printf("non oriente ");
 
-void boucleDFSdijkstra(pSommet sommet_actuel, Graphe * g){
-    pArc tempArc = sommet_actuel->arc;
-    pArc arcMinimum = NULL;
-    int longueurArcMinimum = 0;
-    printf("sommet actuel : %d\n",sommet_actuel->numero);
-    if(tempArc !=NULL) {
-        longueurArcMinimum = -1;
-        while (tempArc != NULL) {
-            printf("Arc de %d vers %d, poids = %d\n",sommet_actuel->numero,tempArc->sommet,tempArc->poids);
-            // si la distance du sommet actuel + le poids de l'arc est inférieur à la distance du sommet de destination
-            if (sommet_actuel->distance + tempArc->poids > g->pSommet[tempArc->sommet]->distance)
-            {
-                g->pSommet[tempArc->sommet]->distance = sommet_actuel->distance + tempArc->poids;
-                g->pSommet[tempArc->sommet]->predecesseur = sommet_actuel;
-                g->pSommet[tempArc->sommet]->couleur = 'G';
+    printf("d'ordre = %d\n",graphe->ordre);
+
+
+    // printf("Couleur du sommet 12 : %c \n", graphe->pSommet[8]->couleur);
+    // printf("Liste creee\n");
+    do{
+        printf("Nouveau point de depart : %d\n", sommet_initial);
+        pSommet sommetInitial = graphe->pSommet[sommet_initial];
+
+        sommetInitial->distance = 1; // Ici la variable distance est utilisée pour stocker le numéro de la machine
+
+        Liste * ListeBFS = CreerListe(sommetInitial);
+
+        while (ListeBFS->longueur != 0){
+
+            printf("Debut analyse\n");
+            // printf("Couleur du sommet a analyser : %c\n", ListeBFS->tete->sommet->couleur);
+            pSommet sommet = ListeBFS->tete->sommet;
+
+            sommet->couleur = 'N';
+
+            printf("Sommet analyse : %d \n", sommet->numero);
+            pArc arc = sommet->arc;
+            while (arc != NULL){
+
+
+                // Ce qui va permettre de déterminer l'étape à laquelle la tâche va être assignée
+
+                if(graphe->pSommet[arc->sommet]->distance < sommet->distance + 1){
+                    graphe->pSommet[arc->sommet]->distance = sommet->distance + 1;
+                    printf("Nouvelle distance du sommet %d : %d\n", arc->sommet, graphe->pSommet[arc->sommet]->distance);
+                }
+
+                printf("%d->%d \n", sommet->numero, arc->sommet);
+                // printf("Couleur du sommet : %c\n", graphe->pSommet[arc->sommet]->couleur);
+                if(graphe->pSommet[arc->sommet]->couleur == 'N'){
+                    // printf("Le sommet est Noir\n");
+                }
+                else if(graphe->pSommet[arc->sommet]->couleur == 'G'){
+                    // printf("Le sommet est Gris\n");
+                }
+                else if(graphe->pSommet[arc->sommet]->couleur == 'B'){
+                    // printf("Le sommet est Blanc\n");
+                    EnfilerSommet(ListeBFS, graphe->pSommet[arc->sommet]);
+                    graphe->pSommet[arc->sommet]->couleur = 'G';
+
+                }
+                else{
+                    printf("Erreur de couleur\n");
+                    exit(-1);
+                }
+                arc = arc->arc_suivant;
+                // printf("Sortie condition\n");
+
             }
+            printf("Fin de l'analyse\n");
+            DefilerSommetBFS(ListeBFS);
+            printf("Elements de la liste: \n");
+            // On affiche les éléments de la liste
+            struct Maillon * temp = ListeBFS->tete;
 
-            // pour trouver l'arc de poids minimum et continuer le programme
-            if (tempArc->poids > longueurArcMinimum && g->pSommet[tempArc->sommet]->couleur != 'N')
-            {
-                longueurArcMinimum = tempArc->poids;
-                arcMinimum = tempArc;
-                printf("L'arc de %d vers %d est plus long\n",sommet_actuel->numero,arcMinimum->sommet);
-
+            for(int i = 0; i < ListeBFS->longueur; i++){
+                printf("%d, ", temp->sommet->numero);
+                temp = temp->suivant;
             }
-            tempArc = tempArc->arc_suivant;
+            printf("\n \n");
+
         }
-        if (longueurArcMinimum != -1) {
-            printf("L'arc %d a l'arc le plus long : %d\n",arcMinimum->sommet,longueurArcMinimum);
-            sommet_actuel->couleur = 'N';
-            printf("Fin de la visite de %d\n", sommet_actuel->numero);
-            sommet_actuel = g->pSommet[arcMinimum->sommet];
-            boucleDFSdijkstra(sommet_actuel,g);
-        }
-        else{
-            tempArc = NULL;
-            printf("Ce sommet n'a pas d'arc\n");
-        }
-    }
-    sommet_actuel->couleur = 'N';
+        printf("Fin du parcours\n");
+        sommet_initial = prochainPointDeDepart(graphe);
+    }while(prochainPointDeDepart(graphe) != -1);
+
+
+
 }
 
-void ParcoursDijkstra(int depart, int arrivee, Graphe * graphe){
-    pSommet sommet_actuel=graphe->pSommet[depart];
-    sommet_actuel->distance=0; // car c'est le premier sommet (le départ)
-    boucleDFSdijkstra(sommet_actuel,graphe);
-    printLongestPath(graphe,depart,arrivee);
-}
 
-int precedences(){
+int ** precedences(){
     Graphe * g;
-    int depart, arrivee;
     g=lireGraphePrecedence("../precedences/precedences.txt");
-    printf("Entrez le sommet de départ : ");
-    scanf("%d",&depart);
-    printf("Entrez le sommet d'arrivée : ");
-    scanf("%d",&arrivee);
-    ParcoursDijkstra(depart,arrivee,g);
-    return 0;
+    parcoursBFS(g);
+
+    // Initialisation du tableau, toutes les cases sont à 0
+
+    int ** tableauPrecedences = (int **) malloc(g->ordre * sizeof(int *));
+    int tailleTableauPrecedences = g->ordre;
+    printf("Ordre du graphe : %d\n", tailleTableauPrecedences);
+    for(int i = 0; i < tailleTableauPrecedences; i++){
+        tableauPrecedences[i] = (int *) malloc(tailleTableauPrecedences * sizeof(int));
+        for(int j = 0; j < tailleTableauPrecedences; j++){
+            tableauPrecedences[i][j] = 0;
+        }
+    }
+    printf("Affichage des precedences\n");
+    affichageEnregistrementPrecedences(g, tableauPrecedences);
 }
 

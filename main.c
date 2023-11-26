@@ -18,5 +18,8 @@ int main()
 }
  */
 int main(){
-    precedences();
+
+    // Initialisation du tableau de données
+
+    int ** tableauDonnees = precedences(tableauDonnees);
 }
