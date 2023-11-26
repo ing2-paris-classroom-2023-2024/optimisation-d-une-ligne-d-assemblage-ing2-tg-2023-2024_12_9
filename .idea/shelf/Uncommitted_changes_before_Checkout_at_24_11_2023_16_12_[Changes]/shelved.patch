@@ -1,0 +1,33 @@
+Index: cmake-build-debug/Testing/Temporary/LastTest.log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Start testing: Nov 24 15:41 Paris, Madrid\r\n----------------------------------------------------------\r\nEnd testing: Nov 24 15:41 Paris, Madrid\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake-build-debug/Testing/Temporary/LastTest.log b/cmake-build-debug/Testing/Temporary/LastTest.log
+--- a/cmake-build-debug/Testing/Temporary/LastTest.log	
++++ b/cmake-build-debug/Testing/Temporary/LastTest.log	
+@@ -1,3 +1,3 @@
+-Start testing: Nov 24 15:41 Paris, Madrid
++Start testing: Nov 24 16:12 Paris, Madrid
+ ----------------------------------------------------------
+-End testing: Nov 24 15:41 Paris, Madrid
++End testing: Nov 24 16:12 Paris, Madrid
+Index: cmake-build-debug/.ninja_log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># ninja log v5\r\n1\t109\t7225393124397519\tCMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/main.c.obj\tda88d7740b021ec3\r\n110\t214\t7225393125402150\toptimisation_d_une_ligne_d_assemblage_td12_grp9.exe\t2cdf7a79c7b779cd\r\n5\t96\t7225393124272173\tCMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/exclusion.c.obj\tfc4562de9582d818\r\n8\t98\t7225393124287196\tCMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/temps_de_cycle.c.obj\tb91f865c6a277f98\r\n11\t102\t7225393124332361\tCMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/precedence.c.obj\t8dafa088e22df893\r\n5\t89\t7225400963053422\tCMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/structure.c.obj\t40250cdda3416740\r\n1\t98\t7225400963149382\tCMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/main.c.obj\tda88d7740b021ec3\r\n10\t102\t7225400963180510\tCMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/menudelancement.c.obj\tfd10ab811505ba46\r\n102\t201\t7225400964117626\toptimisation_d_une_ligne_d_assemblage_td12_grp9.exe\t963788aca94e3722\r\n
+===================================================================
+diff --git a/cmake-build-debug/.ninja_log b/cmake-build-debug/.ninja_log
+--- a/cmake-build-debug/.ninja_log	
++++ b/cmake-build-debug/.ninja_log	
+@@ -8,3 +8,8 @@
+ 1	98	7225400963149382	CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/main.c.obj	da88d7740b021ec3
+ 10	102	7225400963180510	CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/menudelancement.c.obj	fd10ab811505ba46
+ 102	201	7225400964117626	optimisation_d_une_ligne_d_assemblage_td12_grp9.exe	963788aca94e3722
++5	111	7225419294681947	CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/temps_de_cycle.c.obj	b91f865c6a277f98
++13	116	7225419294741269	CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/menudelancement.c.obj	fd10ab811505ba46
++1	120	7225419294771149	CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/main.c.obj	da88d7740b021ec3
++9	137	7225419294955357	CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/structure.c.obj	40250cdda3416740
++137	242	7225419295962568	optimisation_d_une_ligne_d_assemblage_td12_grp9.exe	963788aca94e3722
