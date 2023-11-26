@@ -108,7 +108,6 @@ void fusiontache(tache *t1, tache *t2)
         for (int i = 0; i < t1->tailleNum; ++i)
         {
             t.numero[i] = t1->numero[i];
-            printf("|%d", t.numero[i]);
         }
     }
 
@@ -121,16 +120,8 @@ void fusiontache(tache *t1, tache *t2)
         for (int i = 0; i < t2->tailleNum; ++i)
         {
             t.numero[t1->tailleNum + i] = t2->numero[i];
-            printf("|%d,", t.numero[t1->tailleNum + i]);
         }
     }
-
-    for (int i = 0; i < t.tailleNum; ++i)
-    {
-        printf("%d,", t.numero[i]);
-    }
-    printf("\n");
-
     t.temps = t1->temps + t2->temps;
     free(t1->numero);
     // Ne pas libérer t2->numero ici, car t1->numero pointe déjà vers le même tableau.
@@ -150,10 +141,6 @@ void tempsdecycle(listeTache *liste, int temps)
 
     while (verifliste(liste->tache, liste->taille, temps))
     {
-        afficherTache(liste);
-        printf("\n");
-        printf("compteur : %d\n", compteur);
-
         if ((liste->tache[0].temps + liste->tache[compteur].temps) <= temps)
         {
             fusiontache(&liste->tache[0], &liste->tache[compteur]);
