@@ -7,6 +7,7 @@
 #define OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_TD12_GRP9_TEMPS_DE_CYCLE_H
 #include "stdio.h"
 #include "stdlib.h"
+#include <string.h>
 // structure de tâche
 typedef struct tache
 {
