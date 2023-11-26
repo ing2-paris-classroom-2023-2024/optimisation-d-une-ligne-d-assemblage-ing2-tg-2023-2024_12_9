@@ -15,9 +15,9 @@
 int main()
 {
     listeTache liste;
-    liste.taille = 3;
+    liste.taille = 7;
     liste.tache = malloc(sizeof(tache) * liste.taille);
-    for (liste.taille = 0; liste.taille < 3; liste.taille++)
+    for (liste.taille = 0; liste.taille < 7; liste.taille++)
     {
         liste.tache[liste.taille].numero = malloc(sizeof(int));
         liste.tache[liste.taille].tailleNum = 1;
@@ -28,7 +28,16 @@ int main()
     liste.tache[1].temps = 2;
     liste.tache[2].numero[0] = 3;
     liste.tache[2].temps = 1;
+    liste.tache[3].numero[0] = 4;
+    liste.tache[3].temps = 2;
+    liste.tache[4].numero[0] = 5;
+    liste.tache[4].temps = 3;
+    liste.tache[5].numero[0] = 6;
+    liste.tache[5].temps = 2;
+    liste.tache[6].numero[0] = 7;
+    liste.tache[6].temps = 1;
     afficherTache(&liste);
+    printf("\n");
     tempsdecycle(&liste, 10);
     afficherTache(&liste);
     int choix;
