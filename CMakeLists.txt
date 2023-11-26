@@ -14,4 +14,4 @@ add_executable(optimisation_d_une_ligne_d_assemblage_td12_grp9
         structure.c
         structure.h
         menudelancement.c
-        menudelancement.h)
+        menudelancement.h structure.arfi.h)
