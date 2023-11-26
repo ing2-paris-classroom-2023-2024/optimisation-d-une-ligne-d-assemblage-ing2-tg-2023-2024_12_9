@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/audri/CLionProjects/optimisation-d-une-ligne-d-assemblage-td12_grp9
+# Install script for directory: /Users/arfi/CLionProjects/ING2/optimisation-d-une-ligne-d-assemblage-ing2-tg-2023-2024_12_9
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/optimisation_d_une_ligne_d_assemblage_td12_grp9")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/MinGW/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/audri/CLionProjects/optimisation-d-une-ligne-d-assemblage-td12_grp9/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/arfi/CLionProjects/ING2/optimisation-d-une-ligne-d-assemblage-ing2-tg-2023-2024_12_9/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
