@@ -10,23 +10,7 @@
 #include "temps_de_cycle.h"
 
 
-void afficherTache(listeTache *liste)
-{
-    for (int i = 0; i < liste->taille; i++)
-    {
-        printf("Machine : %d Tache : ",i);
-        for (int j = 0; j < liste->tache[i].tailleNum; j++)
-        {
-            printf("%d", liste->tache[i].numero[j]);
-            if (j != liste->tache[i].tailleNum - 1)
-            {
-                printf(" -> ");
-            }
-        }
-        printf(" Temps : %d\n", liste->tache[i].temps);
-        printf("\n");
-    }
-}
+
 
 int main()
 {
@@ -45,7 +29,7 @@ int main()
     liste.tache[2].numero[0] = 3;
     liste.tache[2].temps = 1;
     afficherTache(&liste);
-    tempsdecycle(liste.tache, 3, 10);
+    tempsdecycle(&liste, 10);
     afficherTache(&liste);
     int choix;
     /*

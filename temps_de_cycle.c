@@ -4,7 +4,23 @@
 
 #include "temps_de_cycle.h"
 
-
+void afficherTache(listeTache *liste)
+{
+    for (int i = 0; i < liste->taille; i++)
+    {
+        printf("Machine : %d Tache : ",i);
+        for (int j = 0; j < liste->tache[i].tailleNum; j++)
+        {
+            printf("%d", liste->tache[i].numero[j]);
+            if (j != liste->tache[i].tailleNum - 1)
+            {
+                printf(" -> ");
+            }
+        }
+        printf(" Temps : %d\n", liste->tache[i].temps);
+        printf("\n");
+    }
+}
 
 // tri fusion pour le temps de cycle
 void fusion(tache *tab, int deb, int milieu, int fin)
@@ -79,7 +95,7 @@ int verifliste(tache *tab, int taille, int temps)
 void fusiontache(tache *t1, tache *t2)
 {
     tache t;
-    t.tailleNum = sizeof(t1->numero)/4 + sizeof(t2->numero)/4;
+    t.tailleNum = t1->tailleNum + t2->tailleNum;
     t.numero = malloc(t.tailleNum*sizeof(int));
     if (t.tailleNum == 1)
     {
@@ -87,23 +103,22 @@ void fusiontache(tache *t1, tache *t2)
     }
     else
     {
-        for (int i = 0; i < sizeof(t1->numero)/4; ++i)
+        for (int i = 0; i < t1->tailleNum; ++i)
         {
             t.numero[i] = t1->numero[i];
         }
     }
     if (t.tailleNum == 1)
     {
-        t.numero[sizeof(t1->numero)/4] = t2->numero[0];
+        t.numero[t1->tailleNum] = t2->numero[0];
     }
     else
     {
-        for (int i = 0; i < sizeof(t2->numero)/4; ++i)
+        for (int i = 0; i < t1->tailleNum; ++i)
         {
-            t.numero[sizeof(t1->numero)/4 + i] = t2->numero[i];
+            t.numero[t1->tailleNum + i] = t2->numero[i];
         }
     }
-    printf("%d",sizeof(t.numero)/4);
     t.temps = t1->temps + t2->temps;
     free(t1->numero);
     free(t2->numero);
@@ -112,28 +127,32 @@ void fusiontache(tache *t1, tache *t2)
 }
 
 
-void tempsdecycle(tache *tab, int taille, int temps)
+void tempsdecycle(listeTache *liste, int temps)
 {
-    int compteur = taille;
+    int compteur = liste->taille;
     printf("test\n");
-    while (verifliste(tab, taille, temps))
+    while (verifliste(liste->tache, liste->taille, temps))
     {
         printf("test1\n");
-        triInsertion(tab, taille);
-        if (tab[0].temps + tab[compteur].temps < temps)
+        triInsertion(liste->tache, liste->taille);
+        if (liste->tache[0].temps + liste->tache[compteur].temps < temps)
         {
             printf("test2\n");
-            fusiontache(&tab[0], &tab[taille]);
+            fusiontache(&liste->tache[0], &liste->tache[liste->taille - 1]);
             printf("test3\n");
-            taille--;
+            liste->taille--;
             compteur--;
             // addaptation de la taille de la liste
-            for (int i = 1; i < taille; i++)
+            if (liste->taille != compteur)
             {
-                tab[i] = tab[i + 1];
+                for (int i = compteur; i < liste->taille - 1; i++)
+                {
+                    liste->tache[i] = liste->tache[i + 1];
+                }
             }
             printf("test4\n");
-            realloc(tab, sizeof(tache) * taille);
+            afficherTache(liste);
+            realloc(liste->tache, sizeof(tache) * liste->taille);
         }
         else
         {
@@ -141,4 +160,5 @@ void tempsdecycle(tache *tab, int taille, int temps)
         }
 
     }
+    printf("test5\n");
 }

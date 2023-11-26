@@ -26,5 +26,6 @@ void fusion(tache tab[], int deb1, int fin1, int fin2);
 int verifliste(tache *tab, int taille, int temps);
 void fusiontache(tache *t1, tache *t2);
 void triInsertion(tache *tab, int taille);
-void tempsdecycle(tache *tab, int taille, int temps);
+void tempsdecycle(listeTache *liste,int temps);
+void afficherliste(listeTache *liste);
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_TD12_GRP9_TEMPS_DE_CYCLE_H

@@ -5,6 +5,6 @@
 -- Check for working C compiler: C:/MinGW/bin/gcc.exe - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
--- Configuring done (0.9s)
+-- Configuring done (1.8s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/Users/audri/CLionProjects/optimisation-d-une-ligne-d-assemblage-td12_grp9/cmake-build-debug
