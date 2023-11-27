@@ -5,6 +5,20 @@
 
 #include "precedence.h"
 
+int compteurNombreMachines(Graphe * graphe){
+    int nombreMachines = 0;
+    for(int i = 1; i < graphe->ordre+1; i++){
+        printf("Sommet %d : %d\n", graphe->pSommet[i]->numero, graphe->pSommet[i]->distance);
+        if (graphe->pSommet[i]->existe == 0){
+            printf("Le sommet %d n'existe pas\n", graphe->pSommet[i]->numero);
+        }
+        if(graphe->pSommet[i]->distance > nombreMachines){
+            nombreMachines = graphe->pSommet[i]->distance;
+        }
+    }
+    printf("Nombre de machines : %d\n", nombreMachines);
+    return nombreMachines;
+}
 
 
 Graphe * lireGraphePrecedence(char * nomFichier)
@@ -39,7 +53,9 @@ Graphe * lireGraphePrecedence(char * nomFichier)
     fseek(ifs, 0, SEEK_SET);
 
     ordre = sommetMaximum;
+
     graphe=CreerGraphe(ordre); // créer le graphe d'ordre sommets
+
 
     graphe->ordre=ordre;
 
@@ -107,21 +123,14 @@ void DefilerSommetBFS(Liste * Liste){
     free(temp);
 }
 
-int compteurNombreMachines(Graphe * graphe){
-    int nombreMachines = 0;
-    for(int i = 0; i < graphe->ordre; i++){
-        printf("Sommet %d : %d\n", graphe->pSommet[i]->numero, graphe->pSommet[i]->distance);
-        if(graphe->pSommet[i]->distance > nombreMachines){
-            nombreMachines = graphe->pSommet[i]->distance;
-        }
-    }
-    printf("Nombre de machines : %d\n", nombreMachines);
-    return nombreMachines;
-}
+
 
 void affichageEnregistrementPrecedences(Graphe * graphe, int ** tableauPrecedences){
 
     int nombreMachines = compteurNombreMachines(graphe);
+
+
+
     // Initialisation du tableau, toutes les cases sont à 0
     int tailleTableauPrecedences = graphe->ordre;
     printf("Ordre du graphe : %d\n", tailleTableauPrecedences);
@@ -131,6 +140,29 @@ void affichageEnregistrementPrecedences(Graphe * graphe, int ** tableauPrecedenc
         }
     }
     printf("Initialisation terminee\n");
+    printf("Taille du tableau : %d\n", tailleTableauPrecedences);
+
+    // On parcourt le graphe et on remplit le tableau de précédences
+    for(int tache = 1; tache < tailleTableauPrecedences+1; tache++) {
+        int machine = graphe->pSommet[tache]->distance;
+        if (machine > 0){
+            tableauPrecedences[machine-1][tache-1] = 1;
+            //printf("Tache %d assignee a la machine %d\n", tache, machine);
+        }
+    }
+
+
+    // On affiche le tableau de précédences
+    printf("Affichage du tableau de precedences\n");
+    for(int i = 0; i < nombreMachines; i++){
+        printf("Machine %d : ", i +1);
+        for(int j = 0; j < tailleTableauPrecedences; j++){
+            printf("%d ", tableauPrecedences[i][j]);
+        }
+        printf("\n");
+    }
+
+    /*
     for(int tache = 0; tache < tailleTableauPrecedences; tache++) {
         int machine = graphe->pSommet[tache]->distance;
         tableauPrecedences[tache][machine] = 1;
@@ -143,6 +175,7 @@ void affichageEnregistrementPrecedences(Graphe * graphe, int ** tableauPrecedenc
         }
         printf("\n");
     }
+     */
 }
 
 void parcoursBFS(Graphe* graphe)
@@ -240,6 +273,9 @@ void parcoursBFS(Graphe* graphe)
 int ** precedences(){
     Graphe * g;
     g=lireGraphePrecedence("../precedences/precedences.txt");
+
+
+
     parcoursBFS(g);
 
     // Initialisation du tableau, toutes les cases sont à 0
