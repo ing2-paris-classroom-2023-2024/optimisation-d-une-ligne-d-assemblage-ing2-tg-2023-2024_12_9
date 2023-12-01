@@ -21,5 +21,7 @@ int main(){
 
     // Initialisation du tableau de données
 
-    int ** tableauDonnees = precedences(tableauDonnees);
+    tableauMemoire * tableau = malloc(sizeof(tableauMemoire));
+
+    precedences(tableau);
 }

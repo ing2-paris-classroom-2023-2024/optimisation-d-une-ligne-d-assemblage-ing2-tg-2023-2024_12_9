@@ -65,7 +65,11 @@ struct Maillon
 
 typedef struct Maillon* pMaillon;
 
-
+typedef struct tableauMemoire{
+    int nombreTaches;
+    int nombreMachines;
+    int ** tableauPrecedences;
+}tableauMemoire;
 
 typedef struct Liste{
     int longueur;

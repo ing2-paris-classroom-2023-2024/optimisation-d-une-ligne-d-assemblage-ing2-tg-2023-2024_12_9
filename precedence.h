@@ -19,7 +19,7 @@ void EnfilerSommet(Liste * Liste, pSommet sommetAEnfiler);
 int prochainPointDeDepart(Graphe * graphe);
 void DefilerSommetBFS(Liste * Liste);
 void parcoursBFS(Graphe* graphe);
-int ** precedences();
+void precedences(tableauMemoire * tableau);
 
 
 
