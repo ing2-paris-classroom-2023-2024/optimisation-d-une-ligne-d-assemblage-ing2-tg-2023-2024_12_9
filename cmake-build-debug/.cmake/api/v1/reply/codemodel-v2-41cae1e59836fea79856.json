@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "optimisation_d_une_ligne_d_assemblage_td12_grp9::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-optimisation_d_une_ligne_d_assemblage_td12_grp9-Debug-6cd490089c56b79e5b48.json",
+					"jsonFile" : "target-optimisation_d_une_ligne_d_assemblage_td12_grp9-Debug-d30116ce40a4936c08c5.json",
 					"name" : "optimisation_d_une_ligne_d_assemblage_td12_grp9",
 					"projectIndex" : 0
 				}
@@ -55,6 +55,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 5
+		"minor" : 4
 	}
 }

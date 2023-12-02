@@ -230,3 +230,94 @@ void tempsdecycle(listeTache *liste, int temps)
         }
     }
 }
+
+void containte(listeTache *l1 , int *tab , listeTache *l2 , int taille)
+{
+    printf("test\n");
+    l2->tache = malloc(taille * sizeof(tache));
+    l2->taille = taille;
+    for (int i = 0; i < l1->taille; ++i)
+    {
+        for (int j = 0; j < taille; ++j) {
+            if (l1->tache[i].numero[0] == tab[j])
+            {
+                l2->tache[i] = l1->tache[i];
+                printf("%d\n", tab[j]);
+                printf("%d\n", l2->tache[i].numero[0]);
+            }
+
+        }
+    }
+    afficherTache(l1);
+}
+
+// fonction qui ajoute une ligne à un tableau entrer en paramètre
+
+void ajouterLigne(int ***tab, int *tailleY ,int *tailleX, listeTache *l)
+{
+    // Réallocation avec vérification
+    int **temp = realloc(*tab, sizeof(int *) * (*tailleY + l->taille));
+    if (temp == NULL)
+    {
+        // Gestion de l'échec de la réallocation
+        printf("Erreur de réallocation de mémoire\n");
+        exit(EXIT_FAILURE);
+    }
+
+    *tab = temp;
+
+    for (int i = 0; i < l->taille; ++i)
+    {
+        if (l->tache[i].tailleNum > *tailleX) *tailleX = l->tache[i].tailleNum;
+    }
+    // Copie des nouvelles lignes
+    for (int i = 0; i < l->taille; ++i)
+    {
+        (*tab)[*tailleY + i] = calloc(sizeof(int) * *tailleX, sizeof(int));
+
+        if ((*tab)[*tailleY + i] == NULL)
+        {
+            // Gestion de l'échec de la réallocation
+            printf("Erreur de réallocation de mémoire\n");
+            exit(EXIT_FAILURE);
+        }
+
+        for (int j = 0; j < l->tache[i].tailleNum; ++j)
+        {
+            (*tab)[*tailleY + i][j] = l->tache[i].numero[j];
+        }
+    }
+
+    *tailleY += l->taille;
+}
+
+void initilisationtempscycle(int *tab , int taille)
+
+{
+    int **tab2 = NULL;
+    int taille2 = 0;
+    int taille3 = 0;
+    listeTache liste;
+    listeTache liste2;
+    remplirTache(&liste, "../operation/operations.txt");
+    afficherTache(&liste);
+    containte(&liste , tab , &liste2 , taille);
+    printf("\n");
+    afficherTache(&liste2);
+    printf("Temps de cycle : %d\n", remplir_temps_de_cycle("../temps/temps_cycle.txt"));
+    tempsdecycle(&liste2, remplir_temps_de_cycle("../temps/temps_cycle.txt"));
+    afficherTache(&liste2);
+    ajouterLigne(&tab2, &taille2,&taille3, &liste2);
+    // affiche le tableau
+    printf("\n");
+    for (int i = 0; i < taille2; ++i)
+    {
+        printf("-");
+        for ( int j = 0; j < taille3; ++j)
+        {
+            printf("|%d|", tab2[i][j]);
+        }
+        printf("\n");
+    }
+
+}

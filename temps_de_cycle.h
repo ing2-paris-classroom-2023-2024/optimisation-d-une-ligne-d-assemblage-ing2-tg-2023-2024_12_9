@@ -31,4 +31,5 @@ void tempsdecycle(listeTache *liste,int temps);
 void afficherliste(listeTache *liste);
 void remplirTache(listeTache *liste, char *nomFichier);
 int remplir_temps_de_cycle(char *nomFichier);
+void initilisationtempscycle(int *tab , int taille);
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_TD12_GRP9_TEMPS_DE_CYCLE_H

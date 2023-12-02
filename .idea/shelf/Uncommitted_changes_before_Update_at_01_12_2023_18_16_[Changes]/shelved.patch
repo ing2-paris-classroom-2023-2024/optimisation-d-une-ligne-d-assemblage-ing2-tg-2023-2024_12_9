@@ -1,0 +1,116 @@
+Index: cmake-build-debug/Testing/Temporary/LastTest.log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Start testing: Nov 19 17:29 Paris, Madrid\r\n----------------------------------------------------------\r\nEnd testing: Nov 19 17:29 Paris, Madrid\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake-build-debug/Testing/Temporary/LastTest.log b/cmake-build-debug/Testing/Temporary/LastTest.log
+--- a/cmake-build-debug/Testing/Temporary/LastTest.log	(revision 7aa0f41810ae7e28aa45eedfd1278694b84cb1fb)
++++ b/cmake-build-debug/Testing/Temporary/LastTest.log	(date 1701450940801)
+@@ -1,3 +1,3 @@
+-Start testing: Nov 19 17:29 Paris, Madrid
++Start testing: Dec 01 18:15 Paris, Madrid
+ ----------------------------------------------------------
+-End testing: Nov 19 17:29 Paris, Madrid
++End testing: Dec 01 18:15 Paris, Madrid
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CMakePresetLoader\">{\r\n  &quot;useNewFormat&quot;: true\r\n}</component>\r\n  <component name=\"CMakeReloadState\">\r\n    <option name=\"reloaded\" value=\"true\" />\r\n  </component>\r\n  <component name=\"CMakeSettings\">\r\n    <configurations>\r\n      <configuration PROFILE_NAME=\"Debug\" ENABLED=\"true\" CONFIG_NAME=\"Debug\" />\r\n    </configurations>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"8e5b429c-28ab-4103-8d96-04f66666c8d1\" name=\"Changes\" comment=\"création structure projet\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/.name\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/exclusion/exclusions.txt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/operation/operations.txt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/precedences/precedences.txt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/temps/temps_cycle.txt\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ClangdSettings\">\r\n    <option name=\"formatViaClangd\" value=\"false\" />\r\n  </component>\r\n  <component name=\"ExecutionTargetManager\" SELECTED_TARGET=\"CMakeBuildProfile:Debug\" />\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectApplicationVersion\">\r\n    <option name=\"ide\" value=\"CLion\" />\r\n    <option name=\"majorVersion\" value=\"2022\" />\r\n    <option name=\"minorVersion\" value=\"2.3\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2YOS7mcTt2L8abUwKdC8sU6Qgpu\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,\r\n    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/audri/Downloads/ProjetLabyrinthe4V3&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"CLionExternalRunConfiguration\" factoryName=\"Application\" REDIRECT_INPUT=\"false\" ELEVATE=\"false\" USE_EXTERNAL_CONSOLE=\"false\" PASS_PARENT_ENVS_2=\"true\">\r\n      <method v=\"2\">\r\n        <option name=\"CLION.EXTERNAL.BUILD\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"optimisation_d_une_ligne_d_assemblage_td12_grp9\" type=\"CMakeRunConfiguration\" factoryName=\"Application\" REDIRECT_INPUT=\"false\" ELEVATE=\"false\" USE_EXTERNAL_CONSOLE=\"false\" PASS_PARENT_ENVS_2=\"true\" PROJECT_NAME=\"optimisation_d_une_ligne_d_assemblage_td12_grp9\" TARGET_NAME=\"optimisation_d_une_ligne_d_assemblage_td12_grp9\" CONFIG_NAME=\"Debug\" RUN_TARGET_PROJECT_NAME=\"optimisation_d_une_ligne_d_assemblage_td12_grp9\" RUN_TARGET_NAME=\"optimisation_d_une_ligne_d_assemblage_td12_grp9\">\r\n      <method v=\"2\">\r\n        <option name=\"com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"8e5b429c-28ab-4103-8d96-04f66666c8d1\" name=\"Changes\" comment=\"\" />\r\n      <created>1700394967319</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1700394967319</updated>\r\n      <workItem from=\"1700394969262\" duration=\"883000\" />\r\n      <workItem from=\"1700411257124\" duration=\"424000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"création du projet\">\r\n      <created>1700411412480</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1700411412480</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"création du projet\">\r\n      <created>1700411426864</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1700411426864</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"création du projet\">\r\n      <created>1700411431630</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1700411431630</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"création structure projet\">\r\n      <created>1700411672943</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1700411672943</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"création du projet\" />\r\n    <MESSAGE value=\"création structure projet\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"création structure projet\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7aa0f41810ae7e28aa45eedfd1278694b84cb1fb)
++++ b/.idea/workspace.xml	(date 1701450961263)
+@@ -6,6 +6,11 @@
+   <component name="CMakeReloadState">
+     <option name="reloaded" value="true" />
+   </component>
++  <component name="CMakeRunConfigurationManager">
++    <generated>
++      <config projectName="optimisation_d_une_ligne_d_assemblage_td12_grp9" targetName="optimisation_d_une_ligne_d_assemblage_td12_grp9" />
++    </generated>
++  </component>
+   <component name="CMakeSettings">
+     <configurations>
+       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+@@ -13,13 +18,7 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="création structure projet">
+-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/exclusion/exclusions.txt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/operation/operations.txt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/precedences/precedences.txt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/temps/temps_cycle.txt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -52,9 +51,11 @@
+   <component name="PropertiesComponent">{
+   &quot;keyToString&quot;: {
+     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+@@ -62,9 +63,9 @@
+   }
+ }</component>
+   <component name="RunManager">
+-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
++    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+       <method v="2">
+-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
++        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+       </method>
+     </configuration>
+     <configuration name="optimisation_d_une_ligne_d_assemblage_td12_grp9" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9" TARGET_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9" RUN_TARGET_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9">
+@@ -82,7 +83,8 @@
+       <option name="presentableId" value="Default" />
+       <updated>1700394967319</updated>
+       <workItem from="1700394969262" duration="883000" />
+-      <workItem from="1700411257124" duration="424000" />
++      <workItem from="1700411257124" duration="1057000" />
++      <workItem from="1701450940571" duration="2000" />
+     </task>
+     <task id="LOCAL-00001" summary="création du projet">
+       <created>1700411412480</created>
+@@ -112,7 +114,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1700411672943</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="création structure projet">
++      <created>1700411704819</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1700411704819</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+Index: .idea/optimisation-d-une-ligne-d-assemblage-td12_grp9.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/optimisation-d-une-ligne-d-assemblage-td12_grp9.iml b/.idea/optimisation-d-une-ligne-d-assemblage-td12_grp9.iml
+new file mode 100644
+--- /dev/null	(date 1701450961199)
++++ b/.idea/optimisation-d-une-ligne-d-assemblage-td12_grp9.iml	(date 1701450961199)
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module classpath="CMake" type="CPP_MODULE" version="4" />
+\ No newline at end of file
