@@ -9,4 +9,18 @@
 #ifndef OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_TD12_GRP9_PRECEDENCE_H
 #define OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_TD12_GRP9_PRECEDENCE_H
 
+#include "structure.h"
+
+
+
+Graphe * lireGraphePrecedence(char * nomFichier);
+Liste * CreerListe(pSommet sommet);
+void EnfilerSommet(Liste * Liste, pSommet sommetAEnfiler);
+int prochainPointDeDepart(Graphe * graphe);
+void DefilerSommetBFS(Liste * Liste);
+void parcoursBFS(Graphe* graphe);
+void precedences(tableauMemoire * tableau);
+
+
+
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_TD12_GRP9_PRECEDENCE_H

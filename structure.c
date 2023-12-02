@@ -69,20 +69,23 @@ Graphe* CreerGraphe(int ordre)
     Newgraphe->poidstotal=0;
     Newgraphe->pSommet = (pSommet*)malloc((ordre)*sizeof(pSommet));
 
-    for(int i=0; i<ordre; i++)
+    for(int i=1; i<ordre +1; i++)
     {
         Newgraphe->pSommet[i]=(pSommet)malloc(sizeof(struct Sommet));
         Newgraphe->pSommet[i]->numero=i;
         Newgraphe->pSommet[i]->couleur='B';
         Newgraphe->pSommet[i]->arc=NULL;
         Newgraphe->pSommet[i]->predecesseur=NULL;
-        Newgraphe->pSommet[i]->distance=10000;
+        Newgraphe->pSommet[i]->existe=0;
+        Newgraphe->pSommet[i]->distance=-1;
     }
     return Newgraphe;
 }
 
 pSommet* CreerArete(pSommet* sommet,int s1,int s2, int poids)
 {
+    sommet[s1]->existe=1;
+    sommet[s2]->existe=1;
     if(sommet[s1]->arc==NULL)
     {
         pArc Newarc=(pArc)malloc(sizeof(struct Arc));

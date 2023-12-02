@@ -37,6 +37,7 @@ struct Sommet
     int distance;
     int numero;
     char couleur;
+    int existe;
     int kruskal;
 };
 
@@ -64,7 +65,11 @@ struct Maillon
 
 typedef struct Maillon* pMaillon;
 
-
+typedef struct tableauMemoire{
+    int nombreTaches;
+    int nombreMachines;
+    int ** tableauPrecedences;
+}tableauMemoire;
 
 typedef struct Liste{
     int longueur;

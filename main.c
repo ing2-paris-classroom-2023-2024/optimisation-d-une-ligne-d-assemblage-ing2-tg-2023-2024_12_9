@@ -7,11 +7,6 @@
 #include "precedence.h"
 #include "structure.h"
 #include "menudelancement.h"
-#include "temps_de_cycle.h"
-
-
-
-
 int main()
 {
 
@@ -52,9 +47,8 @@ int main()
     printf("test\n");*/
     initilisationtempscycle(tab , tailleX);
     int choix;
-    /*
     do {
         choix = menu_de_lancement();
-    } while (choix == 0);*/
+    } while (choix == 0);
     return 0;
 }
