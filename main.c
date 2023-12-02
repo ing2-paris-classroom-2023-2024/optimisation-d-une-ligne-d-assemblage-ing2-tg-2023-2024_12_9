@@ -9,46 +9,41 @@
 #include "menudelancement.h"
 int main()
 {
-
-    int *tab;
-    int tailleX = 5;
-    int tailleY = 3;
-
-
-    // Allocation dynamique du tableau
-    tab = malloc(tailleY * sizeof(int*));
-
-    tab[0] = 1;
-    tab[1]= 2;
-    tab[2] = 3;
-    tab[3] = 4;
-    tab[4] = 5;
-/*
-    for (int i = 0; i < tailleX; ++i)
-    {
-        tab[i] = malloc(tailleX * sizeof(int));
+    tableauMemoire tab;
+    tab.tableauPrecedences = NULL;
+    tab.nombreMachines = 0;
+    tab.nombreTaches = 0;
+    precedences(&tab);
+    printf("Nombre de machines : %d\n", tab.nombreMachines);
+    printf("Nombre de tâches : %d\n", tab.nombreTaches);
+    // realloc le tableau de précédences au nombre de machines
+    tab.tableauPrecedences = realloc(tab.tableauPrecedences, tab.nombreMachines * sizeof(int*));
+    // compter le nombre de tâches
+    tab.nombreTaches = 0;
+    for(int i = 0; i < tab.nombreMachines; i++){
+        int compteur = 0;
+        while(tab.tableauPrecedences[i][compteur] != 0){
+            compteur++;
+        }
+        if (compteur > tab.nombreTaches)tab.nombreTaches = compteur;
     }
-    // Initialisation du tableau test
-    tab[0][0] = 1;
-    tab[0][1] = 2;
-    tab[0][2] = 3;
-    tab[0][3] = 4;
-    tab[0][4] = 5;
-    tab[1][0] = 6;
-    tab[1][1] = 7;
-    tab[1][2] = 8;
-    tab[1][3] = 9;
-    tab[1][4] = 10;
-    tab[2][0] = 11;
-    tab[2][1] = 12;
-    tab[2][2] = 13;
-    tab[2][3] = 15;
-    tab[2][4] = 16;
-    printf("test\n");*/
-    initilisationtempscycle(tab , tailleX);
+    for ( int i = 0; i < tab.nombreMachines; i++){
+        tab.tableauPrecedences[i] = realloc(tab.tableauPrecedences[i], tab.nombreTaches * sizeof(int));
+    }
+    printf("Nombre de tâches : %d\n", tab.nombreTaches);
+    // afficher le tableau de précédences
+    for(int i = 0; i < tab.nombreMachines; i++){
+        printf("Machine %d : ", i);
+        for(int j = 0; j < tab.nombreTaches; j++){
+            printf("%d ", tab.tableauPrecedences[i][j]);
+        }
+        printf("\n");
+    }
+    initilisationtempscycle(&tab);
+    /*
     int choix;
     do {
         choix = menu_de_lancement();
     } while (choix == 0);
-    return 0;
+    return 0;*/
 }

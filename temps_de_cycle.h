@@ -8,6 +8,7 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include <string.h>
+#include "structure.h"
 // structure de tâche
 typedef struct tache
 {
@@ -31,5 +32,5 @@ void tempsdecycle(listeTache *liste,int temps);
 void afficherliste(listeTache *liste);
 void remplirTache(listeTache *liste, char *nomFichier);
 int remplir_temps_de_cycle(char *nomFichier);
-void initilisationtempscycle(int *tab , int taille);
+void initilisationtempscycle(tableauMemoire *tab);
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_TD12_GRP9_TEMPS_DE_CYCLE_H

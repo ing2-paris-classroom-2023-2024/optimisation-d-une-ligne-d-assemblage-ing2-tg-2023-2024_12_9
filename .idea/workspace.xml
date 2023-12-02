@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
 }</component>
@@ -20,44 +17,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="Merge de la branche Mateo sur la branche master">
-      <change afterPath="$PROJECT_DIR$/.idea/icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_11_2023_17_55_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_11_2023_17_55__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_24_11_2023_16_26_[Changes]/.ninja_deps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_24_11_2023_16_26_[Changes]/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_24_11_2023_16_26_[Changes]/a.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_24_11_2023_16_26_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_24_11_2023_16_26_[Changes]1/.ninja_deps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_24_11_2023_16_26_[Changes]1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_24_11_2023_16_26_[Changes]1/a.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_24_11_2023_16_26_[Changes]1/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_24_11_2023_16_26__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-bba0528393dbca9a7681.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_11_2023_16_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_11_2023_16_12__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_11_2023_16_52__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_11_2023_16_52__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_12_2023_18_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_12_2023_18_16__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_11_2023_16_48__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_11_2023_16_48__Changes_.xml" afterDir="false" />
+    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="création structure projet">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_11_2023_17_55__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_11_2023_17_55__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_24_11_2023_16_26__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_24_11_2023_16_26__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-2249fa6c80c1020baa73.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-2249fa6c80c1020baa73.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-647da9826a71156a8c96.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-647da9826a71156a8c96.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-41cae1e59836fea79856.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-41cae1e59836fea79856.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-f7e83760c065b9af5c21.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-f7e83760c065b9af5c21.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-24T14-32-44-0036.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-24T14-32-44-0036.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-12-01T17-16-40-0800.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-12-01T17-16-40-0800.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/exclusion.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/exclusion.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/precedence.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/precedence.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exclusion.h" beforeDir="false" afterPath="$PROJECT_DIR$/exclusion.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/structure.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/structure.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/temps_de_cycle.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/temps_de_cycle.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/optimisation_d_une_ligne_d_assemblage_td12_grp9.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/optimisation_d_une_ligne_d_assemblage_td12_grp9.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/precedence.c" beforeDir="false" afterPath="$PROJECT_DIR$/precedence.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/precedence.h" beforeDir="false" afterPath="$PROJECT_DIR$/precedence.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/precedences/precedences.txt" beforeDir="false" afterPath="$PROJECT_DIR$/precedences/precedences.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/structure.c" beforeDir="false" afterPath="$PROJECT_DIR$/structure.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/structure.h" beforeDir="false" afterPath="$PROJECT_DIR$/structure.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temps_de_cycle.c" beforeDir="false" afterPath="$PROJECT_DIR$/temps_de_cycle.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temps_de_cycle.h" beforeDir="false" afterPath="$PROJECT_DIR$/temps_de_cycle.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,26 +44,8 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="mateo" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;matderoubaix&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="c75e1e56-6d6a-45fb-9ef1-f6d4a1c3cc88" />
-        <option name="url" value="https://github.com/ing2-paris-classroom-2023-2024/optimisation-d-une-ligne-d-assemblage-td12_grp9.git" />
-      </UrlAndAccount>
-    </option>
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -98,9 +55,6 @@
     <option name="majorVersion" value="2022" />
     <option name="minorVersion" value="2.3" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
   <component name="ProjectId" id="2YOS7mcTt2L8abUwKdC8sU6Qgpu" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -109,45 +63,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "Merging master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Travail/ECE 2023-24/Matieres_principales/Algo/Semestre1/Projet/optimisation-d-une-ligne-d-assemblage-td12_grp9/precedence.c",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/audri/Downloads/ProjetLabyrinthe4V3&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="CMake Application.optimisation_d_une_ligne_d_assemblage_td12_grp9">
-    <configuration name="optimisation_d_une_ligne_d_assemblage_td12_grp9" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9" TARGET_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9" RUN_TARGET_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9">
+}</component>
+  <component name="RunManager">
+    <configuration name="optimisation_d_une_ligne_d_assemblage_td12_grp9" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9" TARGET_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9" RUN_TARGET_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="precedence.c - MinGW" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="optimisation_d_une_ligne_d_assemblage_td12_grp9" TARGET_NAME="precedence.c - MinGW" CONFIG_NAME="precedence.c - MinGW">
-      <option name="sourceFile" value="C:\Travail\ECE 2023-24\Matieres_principales\Algo\Semestre1\Projet\optimisation-d-une-ligne-d-assemblage-td12_grp9\precedence.c" />
-      <option name="toolchainName" value="MinGW" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="C/C++ File.precedence.c - MinGW" />
-      <item itemvalue="CMake Application.optimisation_d_une_ligne_d_assemblage_td12_grp9" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -158,187 +92,50 @@
       <option name="presentableId" value="Default" />
       <updated>1700394967319</updated>
       <workItem from="1700394969262" duration="883000" />
-      <workItem from="1700411257124" duration="121000" />
-      <workItem from="1700835286544" duration="3393000" />
-      <workItem from="1700906096958" duration="3667000" />
-      <workItem from="1700912971471" duration="4098000" />
-      <workItem from="1700992166100" duration="15504000" />
-      <workItem from="1701029670235" duration="1201000" />
-      <workItem from="1701095773326" duration="4440000" />
-      <workItem from="1701449625790" duration="40000" />
-      <workItem from="1701449677085" duration="12000" />
-      <workItem from="1701450061677" duration="1315000" />
-      <workItem from="1701451751421" duration="2062000" />
+      <workItem from="1700411257124" duration="424000" />
+      <workItem from="1701451569574" duration="7753000" />
+      <workItem from="1701534174785" duration="3000" />
     </task>
-    <task id="LOCAL-00001" summary="hiérachisation du code">
-      <option name="closed" value="true" />
-      <created>1700836058563</created>
+    <task id="LOCAL-00001" summary="création du projet">
+      <created>1700411412480</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1700836058563</updated>
+      <updated>1700411412480</updated>
     </task>
-    <task id="LOCAL-00002" summary="hiérachisation du code">
-      <option name="closed" value="true" />
-      <created>1700836123929</created>
+    <task id="LOCAL-00002" summary="création du projet">
+      <created>1700411426864</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1700836123929</updated>
+      <updated>1700411426864</updated>
     </task>
-    <task id="LOCAL-00003" summary="hiérachisation du code">
-      <option name="closed" value="true" />
-      <created>1700836305801</created>
+    <task id="LOCAL-00003" summary="création du projet">
+      <created>1700411431630</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1700836305801</updated>
+      <updated>1700411431630</updated>
     </task>
-    <task id="LOCAL-00004" summary="ajout du menu de lancement">
-      <option name="closed" value="true" />
-      <created>1700836985649</created>
+    <task id="LOCAL-00004" summary="création structure projet">
+      <created>1700411672943</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1700836985649</updated>
+      <updated>1700411672943</updated>
     </task>
-    <task id="LOCAL-00005" summary="ajout du menu de lancement">
-      <option name="closed" value="true" />
-      <created>1700836999423</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1700836999423</updated>
-    </task>
-    <task id="LOCAL-00006" summary="ajout du menu de lancement">
-      <option name="closed" value="true" />
-      <created>1700837100471</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1700837100471</updated>
-    </task>
-    <task id="LOCAL-00007" summary="ajout elément de création de graph">
-      <option name="closed" value="true" />
-      <created>1700838186892</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1700838186892</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Changement du prototypage des .h et .c côté précédence">
-      <option name="closed" value="true" />
-      <created>1700933238449</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1700933238449</updated>
-    </task>
-    <task id="LOCAL-00009" summary="J'ai réussi à lancer le programme en changeant le main, j'ai maintenant un problème avec les sommets sans issue, je règle ça demain.">
-      <option name="closed" value="true" />
-      <created>1700935287613</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1700935287613</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Le programme marche désormais avec un BFS au lieu d'un Dijkstra qui se basait sur un DFS parce que je trouve que c'est plus simple in fine, l'affichage du tableau et le fait qu'il se remplisse correctement reste encore à faire, mais en théorie c'est pas trop complexe.">
-      <option name="closed" value="true" />
-      <created>1701024734448</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1701024734448</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Affichage et bugs réparés&#10;Tâche restante :&#10;- Utilisation de la structure &quot;tache&quot; utilisée par Audric dans la contrainte temps de cycle afin de mieux combiner les différentes contraintes">
-      <option name="closed" value="true" />
-      <created>1701100220492</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1701100220492</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VCPKGProject">
-    <isAutomaticEditVcpkgJson value="false" />
-    <isAutomaticCheckingOnLaunch value="false" />
-    <isAutomaticFoundErrors value="true" />
-    <isAutomaticFoundErrors value="true" />
-  </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ID_ORDER">
-      <list>
-        <option value="Default.Root" />
-        <option value="Default.Author" />
-        <option value="Default.Date" />
-        <option value="Default.Subject" />
-        <option value="Space.CommitStatus" />
-      </list>
-    </option>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/julien" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/master" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/main" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="master" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="HEAD" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/mateo" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -346,15 +143,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="hiérachisation du code" />
-    <MESSAGE value="ajout du menu de lancement" />
-    <MESSAGE value="ajout elément de création de graph" />
-    <MESSAGE value="Première version de la contrainte précédence :&#10;- Pas encore réussi à le lancer à cause des problèmes de configuration&#10;- Le programme ne prend pas encore de tableau en entrée ni n'en retourne en sortie&#10;Aussi j'ai rempli le fichier precedences.txt avec le contenu du sujet à des fins de test" />
-    <MESSAGE value="Changement du prototypage des .h et .c côté précédence" />
-    <MESSAGE value="J'ai réussi à lancer le programme en changeant le main, j'ai maintenant un problème avec les sommets sans issue, je règle ça demain." />
-    <MESSAGE value="Le programme marche désormais avec un BFS au lieu d'un Dijkstra qui se basait sur un DFS parce que je trouve que c'est plus simple in fine, l'affichage du tableau et le fait qu'il se remplisse correctement reste encore à faire, mais en théorie c'est pas trop complexe." />
-    <MESSAGE value="Affichage et bugs réparés&#10;Tâche restante :&#10;- Utilisation de la structure &quot;tache&quot; utilisée par Audric dans la contrainte temps de cycle afin de mieux combiner les différentes contraintes" />
-    <MESSAGE value="Merge de la branche Mateo sur la branche master" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge de la branche Mateo sur la branche master" />
+    <MESSAGE value="création du projet" />
+    <MESSAGE value="création structure projet" />
+    <option name="LAST_COMMIT_MESSAGE" value="création structure projet" />
   </component>
 </project>
