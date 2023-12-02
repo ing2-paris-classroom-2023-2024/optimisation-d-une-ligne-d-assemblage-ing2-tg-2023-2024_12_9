@@ -20,10 +20,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="Tri fusion">
+    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="Tri fusion + association des tache et compte des machines nécaissaire, manque plus qu'un fichier texte avec le temps de cycle etc ...">
+      <change afterPath="$PROJECT_DIR$/main.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +98,11 @@
       <workItem from="1700838096518" duration="1157000" />
       <workItem from="1700922986261" duration="623000" />
       <workItem from="1701012006730" duration="59000" />
-      <workItem from="1701012072207" duration="944000" />
+      <workItem from="1701012072207" duration="2135000" />
+      <workItem from="1701380478495" duration="185000" />
+      <workItem from="1701442301281" duration="767000" />
+      <workItem from="1701550442807" duration="4000" />
+      <workItem from="1701550449163" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="Tri fusion">
       <created>1700826007828</created>
@@ -108,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700826007828</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Tri fusion + association des tache et compte des machines nécaissaire, manque plus qu'un fichier texte avec le temps de cycle etc ...">
+      <created>1701013249932</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701013249932</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +138,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Tri fusion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tri fusion" />
+    <MESSAGE value="Tri fusion + association des tache et compte des machines nécaissaire, manque plus qu'un fichier texte avec le temps de cycle etc ..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tri fusion + association des tache et compte des machines nécaissaire, manque plus qu'un fichier texte avec le temps de cycle etc ..." />
   </component>
 </project>
