@@ -17,14 +17,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="adaptation pour fusion V4">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="adaptation pour fusion V5">
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/temps_de_cycle.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/temps_de_cycle.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/optimisation_d_une_ligne_d_assemblage_td12_grp9.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/optimisation_d_une_ligne_d_assemblage_td12_grp9.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temps_de_cycle.c" beforeDir="false" afterPath="$PROJECT_DIR$/temps_de_cycle.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +85,7 @@
       <workItem from="1700411257124" duration="424000" />
       <workItem from="1701451569574" duration="7753000" />
       <workItem from="1701534174785" duration="3000" />
-      <workItem from="1701601964437" duration="9848000" />
+      <workItem from="1701601964437" duration="10269000" />
     </task>
     <task id="LOCAL-00001" summary="création du projet">
       <created>1700411412480</created>
@@ -137,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701607607928</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="adaptation pour fusion V5">
+      <created>1701620460827</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701620460827</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +166,7 @@
     <MESSAGE value="création structure projet" />
     <MESSAGE value="adaptation pour fusion" />
     <MESSAGE value="adaptation pour fusion V4" />
-    <option name="LAST_COMMIT_MESSAGE" value="adaptation pour fusion V4" />
+    <MESSAGE value="adaptation pour fusion V5" />
+    <option name="LAST_COMMIT_MESSAGE" value="adaptation pour fusion V5" />
   </component>
 </project>
