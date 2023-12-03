@@ -68,7 +68,32 @@ void Construire_Graph(struct Graph* g, const char* filename) {
         if (u > sommet_max) sommet_max = u;
         if (v > sommet_max) sommet_max = v;
     }
-    g->nb_sommets = 31;
+    g->nb_sommets = sommet_max;
+
+    // Partie faite par Mateo (verification de l'existance des sommets)
+    int tableauExiste[sommet_max];
+    for (int i = 0; i < sommet_max; i++) {
+        tableauExiste[i] = 0;
+    }
+    for (int i = 0; i < sommet_max; i++) {
+        for (int j = 0; j < sommet_max; j++) {
+            if (g->Matrice[i][j] == 1) {
+                tableauExiste[i] = 1;
+                tableauExiste[j] = 1;
+            }
+        }
+    }
+    int compteur = 0;
+    for (int i = 0; i < sommet_max; i++) {
+        if (tableauExiste[i] == 1) {
+            compteur++;
+        }
+    }
+    // Fin de la partie faite par Mateo
+
+
+
+
     fclose(file);
 }
 
