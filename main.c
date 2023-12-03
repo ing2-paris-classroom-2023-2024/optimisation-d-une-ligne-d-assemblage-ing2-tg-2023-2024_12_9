@@ -44,7 +44,7 @@ int main()
     for(int i = 0; i < tab.nombreMachines; i++){
         printf("Machine %d : ", i);
         for(int j = 0; j < tab.nombreTaches; j++){
-            printf("%d ", tab.tableauPrecedences[i][j]);
+            if (tab.tableauPrecedences[i][j] != 0) printf("%d ", tab.tableauPrecedences[i][j]);
         }
         printf("\n");
     }
@@ -54,6 +54,7 @@ int main()
         choix = menu_de_lancement();
     } while (choix == 0);
     return 0;*/
+
     // libération de la mémoire
     for (int i = 0; i < tab.nombreMachines; ++i)
     {

@@ -13,32 +13,43 @@ void remplirTache(listeTache *liste, char *nomFichier)
         printf("Erreur lors de l'ouverture du fichier\n");
         exit(EXIT_FAILURE);
     }
+
     // Compter le nombre de lignes
     int taille = 0;
-    int caractere;
+    int numero;
+    float temps;
 
-    while ((caractere = fgetc(fichier)) != EOF) {
-        if (caractere == '\n') {
-            taille++;
-        }
+    while (fscanf(fichier, "%d %f", &numero, &temps) == 2)
+    {
+        taille++;
     }
+
     fseek(fichier, 0, SEEK_SET);
-    // Allocation dynamique pour le tableau de tâche
-    liste->tache = malloc(taille * sizeof(tache));
+
+    // Allocation dynamique pour le tableau de tâches
+    liste->tache = calloc(taille, sizeof(tache));
     liste->taille = taille;
     printf("Taille : %d\n", taille);
-    char ligne[100];
-    int i = 0;
-    while (fgets(ligne, 100, fichier) != NULL)
+
+    // Lire les données avec fscanf
+    for (int i = 0; i < taille; ++i)
     {
-        char *token = strtok(ligne, " ");
-        liste->tache[i].numero = malloc(sizeof(int));
-        liste->tache[i].tailleNum = 1;
-        liste->tache[i].numero[0] = (int) atoi(token);
-        token = strtok(NULL, " ");
-        liste->tache[i].temps = atof(token) * 1000;
-        i++;
+        if (fscanf(fichier, "%d %f", &numero, &temps) == 2)
+        {
+            liste->tache[i].numero = calloc(1, sizeof(int));
+            liste->tache[i].tailleNum = 1;
+            liste->tache[i].numero[0] = numero;
+            liste->tache[i].temps = temps * 1000;
+        }
+        else
+        {
+            // Gestion d'une erreur de lecture
+            printf("Erreur lors de la lecture des données du fichier\n");
+            // Vous pouvez choisir de quitter la fonction ou de gérer autrement l'erreur.
+            exit(EXIT_FAILURE);
+        }
     }
+
     fclose(fichier);
 }
 
@@ -314,6 +325,21 @@ void ajouterLigne(int ***tab, int *taille,int tailletab, listeTache *l)
 
     *taille += l->taille;
 }
+void libererTache(listeTache *liste)
+{
+    // Libération de la mémoire pour chaque tâche
+    for (int i = 0; i < liste->taille; ++i)
+    {
+        free(liste->tache[i].numero);
+    }
+
+    // Libération de la mémoire pour le tableau de tâches
+    free(liste->tache);
+
+    // Réinitialisation de la structure listeTache
+    liste->tache = NULL;
+    liste->taille = 0;
+}
 
 void initilisationtempscycle(tableauMemoire *tab)
 
@@ -338,8 +364,10 @@ void initilisationtempscycle(tableauMemoire *tab)
             printf("test7\n");
             afficherTache(&liste2);
             ajouterLigne(&tab2, &taille2,tab->nombreTaches, &liste2);
+            printf("taille2 : %d\n", liste2.taille);
             liste2 = (listeTache) {NULL, 0};
     }
+
     for (int i = 0; i < taille2; ++i)
     {
         for ( int j = 0; j < tab->nombreTaches; ++j)
@@ -366,16 +394,17 @@ void initilisationtempscycle(tableauMemoire *tab)
     // libération de la mémoire
     printf("taille : %d\n", liste.taille);
     printf("taille : %d\n", liste2.taille);
-    for (int i = 0; i < 9; ++i)
+    libererTache(&liste);
+    for (int i = 0; i < liste.taille; ++i)
     {
-        free(liste.tache[i].numero);
-        printf("test\n");
+        if (liste.tache[i].numero != NULL && liste.tache[i].tailleNum != 0)
+        {
+            printf("test\n");
+            free(liste.tache[i].numero);
+            liste.tache[i].numero = NULL;
+        }
     }
     free(liste.tache);
-    /*
-    for (int i = 0; i < liste2.taille; ++i)
-    {
-        free(liste2.tache[i].numero);
-    }*/
+    liste.tache = NULL;
     free(liste2.tache);
 }
