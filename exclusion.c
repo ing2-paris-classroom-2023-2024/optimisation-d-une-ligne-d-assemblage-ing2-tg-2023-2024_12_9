@@ -1,10 +1,6 @@
 
 #include "exclusion.h"
 
-
-
-
-
 // Initialiser le graphe
 void initGraph(struct Graph* g, int nb_sommet) {
     g->nb_sommets = nb_sommet;
@@ -72,16 +68,16 @@ void Construire_Graph(struct Graph* g, const char* filename) {
         if (u > sommet_max) sommet_max = u;
         if (v > sommet_max) sommet_max = v;
     }
-    g->nb_sommets = sommet_max + 1;
+    g->nb_sommets = 31;
 
     fclose(file);
 }
 
 // Affichage des stations
-void affichage_stations(int couleur[], int nb_sommets) {
+void affichage_stations(int couleur[], int nb_sommets , int ***tab) {
     int numero_station = 1;
+    int compteur = 0;
     int station_existente;
-
     do {
         station_existente = 0;
         printf("Station %d: ", numero_station);
@@ -91,11 +87,38 @@ void affichage_stations(int couleur[], int nb_sommets) {
                 station_existente = 1;
             }
         }
+        printf("station existante : %d\n", station_existente);
         if (station_existente) {
             printf("\n");
             numero_station++;
         }
+        compteur++;
     } while (station_existente);
+    numero_station = 1;
+    *tab = calloc(compteur, sizeof(int*));
+    for (int i = 0; i < compteur; i++) {
+        (*tab)[i] = calloc(nb_sommets, sizeof(int));
+    }
+    do {
+        station_existente = 0;
+        for (int i = 0; i < nb_sommets; i++) {
+            if (couleur[i] == numero_station) {
+                station_existente = 1;
+                (*tab)[numero_station - 1][i] = i;
+            }
+        }
+        if (station_existente){
+            numero_station++;
+        }
+    } while (station_existente);
+    // affichage couleur
+    for (int i = 0; i < compteur; i++) {
+        for (int j = 0; j < nb_sommets; j++) {
+            printf("%d ", couleur[j]);
+        }
+        printf("\n");
+    }
+
 }
 
 

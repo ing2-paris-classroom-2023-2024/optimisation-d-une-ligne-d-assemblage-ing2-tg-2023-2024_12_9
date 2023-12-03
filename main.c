@@ -81,10 +81,31 @@ int main()
 
 int main() {
     struct Graph g;
+    int **tab=NULL;
     initGraph(&g, MAX);
     Construire_Graph(&g, "../exclusion/exclusions.txt"); // Remplacez par le chemin de votre fichier
     int color[MAX];
     graphColoring(&g, MAX, color); // Utilisez MAX_VERTICES comme estimation du nombre de couleurs
-    affichage_stations(color, g.nb_sommets);
+    affichage_stations(color, g.nb_sommets, &tab);
+    /*
+    for (int i = 0; i < g.nb_sommets; ++i) {
+        printf("-");
+        for (int j = 0; j < g.nb_sommets; ++j) {
+            printf("|%d|", tab[i][j]);
+        }
+        printf("\n");
+    }*/
+    // affiche la matrice
+    for (int i = 0; i < MAX; i++) {
+        printf("-");
+        for (int j = 0; j < MAX; j++) {
+            printf("%d", g.Matrice[i][j]);
+        }
+        printf("\n");
+    }
+    /*
+    for (int i = 0; i < g.nb_sommets; ++i) {
+        free(tab[i]);
+    }*/
     return 0;
 }
