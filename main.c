@@ -40,10 +40,24 @@ int main()
         printf("\n");
     }
     initilisationtempscycle(&tab);
+    // afficher le tableau de précédences
+    for(int i = 0; i < tab.nombreMachines; i++){
+        printf("Machine %d : ", i);
+        for(int j = 0; j < tab.nombreTaches; j++){
+            printf("%d ", tab.tableauPrecedences[i][j]);
+        }
+        printf("\n");
+    }
     /*
     int choix;
     do {
         choix = menu_de_lancement();
     } while (choix == 0);
     return 0;*/
+    // libération de la mémoire
+    for (int i = 0; i < tab.nombreMachines; ++i)
+    {
+        free(tab.tableauPrecedences[i]);
+    }
+    free(tab.tableauPrecedences);
 }

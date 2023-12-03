@@ -338,20 +338,18 @@ void initilisationtempscycle(tableauMemoire *tab)
             printf("test7\n");
             afficherTache(&liste2);
             ajouterLigne(&tab2, &taille2,tab->nombreTaches, &liste2);
-            for (int i = 0; i < taille2; ++i)
-            {
-                printf("-");
-                for ( int j = 0; j < tab->nombreTaches; ++j)
-                {
-                    printf("|%d|", tab2[i][j]);
-                }
-                printf("\n");
-            }
-            printf("test8\n");
-            printf("test9\n");
             liste2 = (listeTache) {NULL, 0};
     }
-
+    for (int i = 0; i < taille2; ++i)
+    {
+        for ( int j = 0; j < tab->nombreTaches; ++j)
+        {
+            if (tab2[i][j] > 1000)
+            {
+                tab2[i][j] = 0;
+            }
+        }
+    }
     tab->tableauPrecedences = tab2;
     tab->nombreMachines = taille2;
     tab->nombreTaches = 0;
@@ -362,7 +360,22 @@ void initilisationtempscycle(tableauMemoire *tab)
         }
         if (compteur > tab->nombreTaches)tab->nombreTaches = compteur;
     }
-    // affiche le tableau
-    printf("\n");
-
+    afficherTache(&liste);
+    printf("test\n");
+    afficherTache(&liste2);
+    // libération de la mémoire
+    printf("taille : %d\n", liste.taille);
+    printf("taille : %d\n", liste2.taille);
+    for (int i = 0; i < 9; ++i)
+    {
+        free(liste.tache[i].numero);
+        printf("test\n");
+    }
+    free(liste.tache);
+    /*
+    for (int i = 0; i < liste2.taille; ++i)
+    {
+        free(liste2.tache[i].numero);
+    }*/
+    free(liste2.tache);
 }
