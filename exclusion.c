@@ -1,14 +1,9 @@
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "exclusion.h"
 
-#define MAX 40  // Estimation du nombre maximum de sommets
 
-// Structure pour représenter un graphe
-struct Graph {
-    int Matrice[MAX][MAX];
-    int nb_sommets;
-};
+
+
 
 // Initialiser le graphe
 void initGraph(struct Graph* g, int nb_sommet) {
@@ -103,15 +98,4 @@ void affichage_stations(int couleur[], int nb_sommets) {
     } while (station_existente);
 }
 
-/*int main() {
-    struct Graph g;
-    initGraph(&g, MAX);
 
-    Construire_Graph(&g, "welsh.txt"); // Remplacez par le chemin de votre fichier
-
-    int color[MAX];
-    graphColoring(&g, MAX, color); // Utilisez MAX_VERTICES comme estimation du nombre de couleurs
-
-    affichage_stations(color, g.nb_sommets);
-    return 0;
-}*/

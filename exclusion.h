@@ -10,5 +10,14 @@
 #include "structure.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#define MAX 40  // Estimation du nombre maximum de sommets
+// Structure pour représenter un graphe
+struct Graph {
+    int Matrice[MAX][MAX];
+    int nb_sommets;
+};
+void initGraph(struct Graph* g, int nb_sommet);
+void Construire_Graph(struct Graph* g, const char* filename);
+void graphColoring(struct Graph* g, int m, int couleurs[]);
+void affichage_stations(int couleur[], int nb_sommets);
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_TD12_GRP9_EXCLUSION_H
