@@ -8,9 +8,9 @@
 int compteurNombreMachines(Graphe * graphe){
     int nombreMachines = 0;
     for(int i = 1; i < graphe->ordre+1; i++){
-        printf("Sommet %d : %d\n", graphe->pSommet[i]->numero, graphe->pSommet[i]->distance);
+        // printf("Sommet %d : %d\n", graphe->pSommet[i]->numero, graphe->pSommet[i]->distance);
         if (graphe->pSommet[i]->existe == 0){
-            printf("Le sommet %d n'existe pas\n", graphe->pSommet[i]->numero);
+            // printf("Le sommet %d n'existe pas\n", graphe->pSommet[i]->numero);
         }
         if(graphe->pSommet[i]->distance > nombreMachines){
             nombreMachines = graphe->pSommet[i]->distance;
@@ -94,13 +94,13 @@ void EnfilerSommet(Liste * Liste, pSommet sommetAEnfiler){
         temp = temp->suivant;
 
     }
-    printf("temp = %d passe\n", temp->sommet->numero);
+    // printf("temp = %d passe\n", temp->sommet->numero);
     pMaillon NewMaillon = (pMaillon) malloc(sizeof(struct Maillon));
     temp->suivant = NewMaillon;
     NewMaillon->sommet = sommetAEnfiler;
     NewMaillon->suivant = NULL;
     Liste->longueur++;
-    printf("Sommet %d enfile\n", sommetAEnfiler->numero);
+    // printf("Sommet %d enfile\n", sommetAEnfiler->numero);
 
 }
 
@@ -115,7 +115,7 @@ int prochainPointDeDepart(Graphe * graphe){
 }
 
 void DefilerSommetBFS(Liste * Liste){
-    printf("Sommet %d defile\n", Liste->tete->sommet->numero);
+    // printf("Sommet %d defile\n", Liste->tete->sommet->numero);
     pMaillon temp = Liste->tete;
     Liste->longueur--;
     Liste->tete = temp->suivant;
@@ -147,7 +147,7 @@ void affichageEnregistrementPrecedences(Graphe * graphe, tableauMemoire * tablea
     // Initialisation du tableau, toutes les cases sont à 0
     int tailleTableauPrecedences = graphe->ordre;
 
-    printf("Ordre du graphe : %d\n", tailleTableauPrecedences);
+    // printf("Ordre du graphe : %d\n", tailleTableauPrecedences);
 
     for(int i = 0; i < nombreMachines; i++){
         for(int j = 0; j < tailleTableauPrecedences; j++){
@@ -156,8 +156,8 @@ void affichageEnregistrementPrecedences(Graphe * graphe, tableauMemoire * tablea
     }
 
 
-    printf("Initialisation terminee\n");
-    printf("Taille du tableau : %d\n", tailleTableauPrecedences);
+    // printf("Initialisation terminee\n");
+    // printf("Taille du tableau : %d\n", tailleTableauPrecedences);
 
     // On parcourt le graphe et on remplit le tableau de précédences
     for(int tache = 1; tache < tailleTableauPrecedences+1; tache++) {
@@ -174,7 +174,7 @@ void affichageEnregistrementPrecedences(Graphe * graphe, tableauMemoire * tablea
 
 
     // On affiche le tableau de précédences
-    printf("Affichage du tableau de precedences\n");
+    // printf("Affichage du tableau de precedences\n");
     for(int i = 0; i < nombreMachines; i++){
         printf("Machine %d : ", i);
         for(int j = 0; j < tailleTableauPrecedences; j++){
@@ -197,7 +197,7 @@ void parcoursBFS(Graphe* graphe)
      */
 
 
-    printf("Graphe ");
+    /* printf("Graphe ");
 
     if(graphe->orientation)
         printf("oriente ");
@@ -205,12 +205,13 @@ void parcoursBFS(Graphe* graphe)
         printf("non oriente ");
 
     printf("d'ordre = %d\n",graphe->ordre);
+     */
 
 
     // printf("Couleur du sommet 12 : %c \n", graphe->pSommet[8]->couleur);
     // printf("Liste creee\n");
     do{
-        printf("Nouveau point de depart : %d\n", sommet_initial);
+        // printf("Nouveau point de depart : %d\n", sommet_initial);
         pSommet sommetInitial = graphe->pSommet[sommet_initial];
 
         sommetInitial->distance = 1; // Ici la variable distance est utilisée pour stocker le numéro de la machine
@@ -219,13 +220,13 @@ void parcoursBFS(Graphe* graphe)
 
         while (ListeBFS->longueur != 0){
 
-            printf("Debut analyse\n");
+            // printf("Debut analyse\n");
             // printf("Couleur du sommet a analyser : %c\n", ListeBFS->tete->sommet->couleur);
             pSommet sommet = ListeBFS->tete->sommet;
 
             sommet->couleur = 'N';
 
-            printf("Sommet analyse : %d \n", sommet->numero);
+            // printf("Sommet analyse : %d \n", sommet->numero);
             pArc arc = sommet->arc;
             while (arc != NULL){
 
@@ -234,10 +235,10 @@ void parcoursBFS(Graphe* graphe)
 
                 if(graphe->pSommet[arc->sommet]->distance < sommet->distance + 1){
                     graphe->pSommet[arc->sommet]->distance = sommet->distance + 1;
-                    printf("Nouvelle distance du sommet %d : %d\n", arc->sommet, graphe->pSommet[arc->sommet]->distance);
+                    // printf("Nouvelle distance du sommet %d : %d\n", arc->sommet, graphe->pSommet[arc->sommet]->distance);
                 }
 
-                printf("%d->%d \n", sommet->numero, arc->sommet);
+                // printf("%d->%d \n", sommet->numero, arc->sommet);
                 // printf("Couleur du sommet : %c\n", graphe->pSommet[arc->sommet]->couleur);
                 if(graphe->pSommet[arc->sommet]->couleur == 'N'){
                     // printf("Le sommet est Noir\n");
@@ -259,20 +260,20 @@ void parcoursBFS(Graphe* graphe)
                 // printf("Sortie condition\n");
 
             }
-            printf("Fin de l'analyse\n");
+            // printf("Fin de l'analyse\n");
             DefilerSommetBFS(ListeBFS);
-            printf("Elements de la liste: \n");
+            // printf("Elements de la liste: \n");
             // On affiche les éléments de la liste
             struct Maillon * temp = ListeBFS->tete;
 
             for(int i = 0; i < ListeBFS->longueur; i++){
-                printf("%d, ", temp->sommet->numero);
+                // printf("%d, ", temp->sommet->numero);
                 temp = temp->suivant;
             }
-            printf("\n \n");
+            // printf("\n \n");
 
         }
-        printf("Fin du parcours\n");
+        // printf("Fin du parcours\n");
         sommet_initial = prochainPointDeDepart(graphe);
     }while(prochainPointDeDepart(graphe) != -1);
 
@@ -293,7 +294,7 @@ void precedences(tableauMemoire * tableau){
 
     int ** tableauPrecedences = (int **) malloc(g->ordre * sizeof(int *));
     int tailleTableauPrecedences = g->ordre;
-    printf("Ordre du graphe : %d\n", tailleTableauPrecedences);
+    // printf("Ordre du graphe : %d\n", tailleTableauPrecedences);
     for(int i = 0; i < tailleTableauPrecedences; i++){
         tableauPrecedences[i] = (int *) malloc(tailleTableauPrecedences * sizeof(int));
         for(int j = 0; j < tailleTableauPrecedences; j++){
