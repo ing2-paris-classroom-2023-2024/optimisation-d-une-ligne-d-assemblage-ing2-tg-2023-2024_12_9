@@ -21,7 +21,7 @@ int main()
         choix = menu_de_lancement();
     } while (choix == 0);
     if (choix == 1) {
-        /*
+
         exclusion(&tab);
         // afficher le tableau de précédences
         for(int i = 0; i < tab.nombreMachines; i++){
@@ -82,12 +82,9 @@ int main()
 int main() {
     struct Graph g;
     initGraph(&g, MAX);
-
-    Construire_Graph(&g, "welsh.txt"); // Remplacez par le chemin de votre fichier
-
+    Construire_Graph(&g, "../exclusion/exclusions.txt"); // Remplacez par le chemin de votre fichier
     int color[MAX];
     graphColoring(&g, MAX, color); // Utilisez MAX_VERTICES comme estimation du nombre de couleurs
-
     affichage_stations(color, g.nb_sommets);
     return 0;
 }
