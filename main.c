@@ -7,6 +7,7 @@
 #include "precedence.h"
 #include "structure.h"
 #include "menudelancement.h"
+/*
 int main()
 {
     tableauMemoire tab;
@@ -29,10 +30,10 @@ int main()
                 if (tab.tableauPrecedences[i][j] != 0) printf("%d ", tab.tableauPrecedences[i][j]);
             }
             printf("\n");
-        }*/
+        }
     }
     if (choix == 2) {
-        /*
+
         temps_de_cycle(&tab);
         // afficher le tableau de précédences
         for(int i = 0; i < tab.nombreMachines; i++){
@@ -41,7 +42,7 @@ int main()
                 if (tab.tableauPrecedences[i][j] != 0) printf("%d ", tab.tableauPrecedences[i][j]);
             }
             printf("\n");
-        }*/
+        }
     }
     if (choix == 3) {
         precedences(&tab);
@@ -75,5 +76,18 @@ int main()
         free(tab.tableauPrecedences[i]);
     }
     free(tab.tableauPrecedences);
+    return 0;
+}*/
+
+int main() {
+    struct Graph g;
+    initGraph(&g, MAX);
+
+    Construire_Graph(&g, "welsh.txt"); // Remplacez par le chemin de votre fichier
+
+    int color[MAX];
+    graphColoring(&g, MAX, color); // Utilisez MAX_VERTICES comme estimation du nombre de couleurs
+
+    affichage_stations(color, g.nb_sommets);
     return 0;
 }

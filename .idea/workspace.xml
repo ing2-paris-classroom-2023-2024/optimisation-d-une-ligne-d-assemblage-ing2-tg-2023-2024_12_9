@@ -17,15 +17,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="-mise en place du menu avec les contraintes de temps et de précédence">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/temps_de_cycle.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/temps_de_cycle.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/optimisation_d_une_ligne_d_assemblage_td12_grp9.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/optimisation_d_une_ligne_d_assemblage_td12_grp9.exe" afterDir="false" />
+    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="-nettoyage des affichage inutile dans temps de cycle">
+      <change beforePath="$PROJECT_DIR$/exclusion.c" beforeDir="false" afterPath="$PROJECT_DIR$/exclusion.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exclusion.h" beforeDir="false" afterPath="$PROJECT_DIR$/exclusion.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temps_de_cycle.c" beforeDir="false" afterPath="$PROJECT_DIR$/temps_de_cycle.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +82,7 @@
       <workItem from="1700411257124" duration="424000" />
       <workItem from="1701451569574" duration="7753000" />
       <workItem from="1701534174785" duration="3000" />
-      <workItem from="1701601964437" duration="10692000" />
+      <workItem from="1701601964437" duration="11060000" />
     </task>
     <task id="LOCAL-00001" summary="création du projet">
       <created>1700411412480</created>
@@ -152,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701620850968</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="-nettoyage des affichage inutile dans temps de cycle">
+      <created>1701621268642</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701621268642</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +179,7 @@
     <MESSAGE value="adaptation pour fusion V4" />
     <MESSAGE value="adaptation pour fusion V5" />
     <MESSAGE value="-mise en place du menu avec les contraintes de temps et de précédence" />
-    <option name="LAST_COMMIT_MESSAGE" value="-mise en place du menu avec les contraintes de temps et de précédence" />
+    <MESSAGE value="-nettoyage des affichage inutile dans temps de cycle" />
+    <option name="LAST_COMMIT_MESSAGE" value="-nettoyage des affichage inutile dans temps de cycle" />
   </component>
 </project>
