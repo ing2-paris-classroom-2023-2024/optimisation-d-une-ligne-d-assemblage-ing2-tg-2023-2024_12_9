@@ -59,15 +59,6 @@ int main()
         for ( int i = 0; i < tab.nombreMachines; i++){
             tab.tableauPrecedences[i] = realloc(tab.tableauPrecedences[i], tab.nombreTaches * sizeof(int));
         }
-        printf("Nombre de tâches : %d\n", tab.nombreTaches);
-        // afficher le tableau de précédences
-        for(int i = 0; i < tab.nombreMachines; i++){
-            printf("Machine %d : ", i);
-            for(int j = 0; j < tab.nombreTaches; j++){
-                printf("%d ", tab.tableauPrecedences[i][j]);
-            }
-            printf("\n");
-        }
         initilisationtempscycle(&tab);
         // afficher le tableau de précédences
         for(int i = 0; i < tab.nombreMachines; i++){

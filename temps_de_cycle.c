@@ -161,11 +161,9 @@ int verifliste(tache *tab, int taille, int temps)
 
 void fusiontache(tache *t1, tache *t2)
 {
-    printf("test1\n");
     tache t;
     t.tailleNum = t1->tailleNum + t2->tailleNum;
     t.numero = calloc(t.tailleNum, sizeof(int));
-    printf("test2\n");
     /*
     if (t.tailleNum == 1)
     {
@@ -175,13 +173,11 @@ void fusiontache(tache *t1, tache *t2)
     }
     else
     {*/
-        printf("test2.6\n");
         for (int i = 0; i < t1->tailleNum; ++i)
         {
             t.numero[i] = t1->numero[i];
         }
     //}
-    printf("test3\n");
         /*
     if (t2->tailleNum == 1)
     {
@@ -194,11 +190,8 @@ void fusiontache(tache *t1, tache *t2)
             t.numero[t1->tailleNum + i] = t2->numero[i];
         }
     //}
-    printf("test4\n");
     t.temps = t1->temps + t2->temps;
-    printf("test5\n");
     //free(t1->numero);
-    printf("test6\n");
     // Ne pas libérer t2->numero ici, car t1->numero pointe déjà vers le même tableau.
     // free(t2->numero);
     // free(t2);
@@ -212,18 +205,12 @@ void tempsdecycle(listeTache *liste, int temps)
 {
     int compteur = liste->taille - 1;
     int tempsConv = temps * 1000;
-    printf("\n");
-    printf("Temps : %d\n", temps);
     triInsertion(liste->tache, liste->taille);
-    printf("test\n");
     while (verifliste(liste->tache, liste->taille, tempsConv))
     {
-        printf("test\n");
         if ((liste->tache[0].temps + liste->tache[compteur].temps) <= tempsConv)
         {
-            printf("test\n");
             fusiontache(&liste->tache[0], &liste->tache[compteur]);
-            printf("test\n");
             // Copie des éléments suivants dans le tableau
             if (compteur != liste->taille - 1)
             {
@@ -263,10 +250,8 @@ void contrainte(listeTache *l1, int *tab, listeTache *l2)
         taille++;
     }
 
-    printf("test\n");
     l2->tache = malloc(taille * sizeof(tache));
     l2->taille = taille;
-    printf("test\n");
 
     for (int i = 0; i < l1->taille; ++i)
     {
@@ -294,7 +279,6 @@ void contrainte(listeTache *l1, int *tab, listeTache *l2)
 void ajouterLigne(int ***tab, int *taille,int tailletab, listeTache *l)
 {
     int tailletemp = *taille + l->taille;
-    printf("tailletemp : %d\n", tailletemp);
         int **temp = realloc(*tab, sizeof(int*) * tailletemp);
         if (temp == NULL)
         {
@@ -348,23 +332,14 @@ void initilisationtempscycle(tableauMemoire *tab)
     int taille2 = 0;
     listeTache liste = {NULL, 0};
     listeTache liste2 = {NULL, 0};
-    printf("test\n");
     remplirTache(&liste, "../operation/operations.txt");
-    printf("test\n");
+    printf("Temps de cycle : %d\n", remplir_temps_de_cycle("../temps/temps_cycle.txt"));
    //afficherTache(&liste);
     for (int i = 0; i < tab->nombreMachines; ++i)
     {
             contrainte(&liste , tab->tableauPrecedences[i] , &liste2);
-            printf("test\n");
-            printf("\n");
-            //afficherTache(&liste2);
-            //printf("Temps de cycle : %d\n", remplir_temps_de_cycle("../temps/temps_cycle.txt"));
-            printf("test6\n");
             tempsdecycle(&liste2, remplir_temps_de_cycle("../temps/temps_cycle.txt"));
-            printf("test7\n");
-            afficherTache(&liste2);
             ajouterLigne(&tab2, &taille2,tab->nombreTaches, &liste2);
-            printf("taille2 : %d\n", liste2.taille);
             liste2 = (listeTache) {NULL, 0};
     }
 
@@ -388,12 +363,7 @@ void initilisationtempscycle(tableauMemoire *tab)
         }
         if (compteur > tab->nombreTaches)tab->nombreTaches = compteur;
     }
-    afficherTache(&liste);
-    printf("test\n");
-    afficherTache(&liste2);
     // libération de la mémoire
-    printf("taille : %d\n", liste.taille);
-    printf("taille : %d\n", liste2.taille);
     libererTache(&liste);
     for (int i = 0; i < liste.taille; ++i)
     {
