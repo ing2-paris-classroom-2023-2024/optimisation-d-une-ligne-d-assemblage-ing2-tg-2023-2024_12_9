@@ -68,7 +68,7 @@ void Construire_Graph(struct Graph* g, const char* filename) {
         if (u > sommet_max) sommet_max = u;
         if (v > sommet_max) sommet_max = v;
     }
-    g->nb_sommets = sommet_max;
+
 
     // Partie faite par Mateo (verification de l'existance des sommets)
     int tableauExiste[sommet_max];
@@ -90,7 +90,7 @@ void Construire_Graph(struct Graph* g, const char* filename) {
         }
     }
     // Fin de la partie faite par Mateo
-
+    g->nb_sommets = sommet_max;
 
 
 
@@ -98,7 +98,7 @@ void Construire_Graph(struct Graph* g, const char* filename) {
 }
 
 // Affichage des stations
-void affichage_stations(int couleur[], int nb_sommets , int ***tab) {
+void affichage_stations(int couleur[], int nb_sommets , int ***tab , int *nX , int *nY) {
     int numero_station = 1;
     int compteur = 0;
     int station_existente;
@@ -138,10 +138,12 @@ void affichage_stations(int couleur[], int nb_sommets , int ***tab) {
     // affichage couleur
     for (int i = 0; i < compteur; i++) {
         for (int j = 0; j < nb_sommets; j++) {
-            printf("%d ", couleur[j]);
+            printf("%d ", (*tab)[i][j]);
         }
         printf("\n");
     }
+    *nX = compteur;
+    *nY = nb_sommets;
 }
 
 
