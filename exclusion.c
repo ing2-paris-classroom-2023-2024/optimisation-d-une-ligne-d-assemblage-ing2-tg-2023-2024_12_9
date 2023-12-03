@@ -1,55 +1,50 @@
-//
-// Created by audri on 24/11/2023.
-//
-
-#include "exclusion.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_VERTICES 40  // Estimation du nombre maximum de sommets
+#define MAX 40  // Estimation du nombre maximum de sommets
 
 // Structure pour représenter un graphe
 struct Graph {
-    int adjMatrix[MAX_VERTICES][MAX_VERTICES];
-    int numVertices;
+    int Matrice[MAX][MAX];
+    int nb_sommets;
 };
 
 // Initialiser le graphe
-void initGraph(struct Graph* g, int numVertices) {
-    g->numVertices = numVertices;
-    for (int i = 0; i < numVertices; i++)
-        for (int j = 0; j < numVertices; j++)
-            g->adjMatrix[i][j] = 0;
+void initGraph(struct Graph* g, int nb_sommet) {
+    g->nb_sommets = nb_sommet;
+    for (int i = 0; i < nb_sommet; i++)
+        for (int j = 0; j < nb_sommet; j++)
+            g->Matrice[i][j] = 0;
 }
 
 // Ajouter une arête au graphe
-void addEdge(struct Graph* g, int u, int v) {
-    g->adjMatrix[u][v] = 1;
-    g->adjMatrix[v][u] = 1;
+void ajouter_arrete(struct Graph* g, int u, int v) {
+    g->Matrice[u][v] = 1;
+    g->Matrice[v][u] = 1;
 }
 
 // Vérifier si la couleur peut être attribuée au sommet
-int isSafe(int v, struct Graph* g, int color[], int c) {
-    for (int i = 0; i < g->numVertices; i++)
-        if (g->adjMatrix[v][i] && c == color[i])
+int Verification(int v, struct Graph* g, int couleur[], int c) {
+    for (int i = 0; i < g->nb_sommets; i++)
+        if (g->Matrice[v][i] && c == couleur[i])
             return 0;
     return 1;
 }
 
 // Fonction d'aide pour la coloration
-int graphColoringUtil(struct Graph* g, int m, int color[], int v) {
-    if (v == g->numVertices)
+int graph_Coloration(struct Graph* g, int m, int couleurs[], int v) {
+    if (v == g->nb_sommets)
         return 1;
 
     for (int c = 1; c <= m; c++) {
-        if (isSafe(v, g, color, c)) {
-            color[v] = c;
+        if (Verification(v, g, couleurs, c)) {
+            couleurs[v] = c;
 
-            if (graphColoringUtil(g, m, color, v + 1) == 1)
+            if (graph_Coloration(g, m, couleurs, v + 1) == 1)
                 return 1;
 
-            color[v] = 0;
+            couleurs[v] = 0;
         }
     }
 
@@ -57,18 +52,18 @@ int graphColoringUtil(struct Graph* g, int m, int color[], int v) {
 }
 
 // Fonction pour colorer le graphe
-void graphColoring(struct Graph* g, int m, int color[]) {
-    for (int i = 0; i < g->numVertices; i++)
-        color[i] = 0;
+void graphColoring(struct Graph* g, int m, int couleurs[]) {
+    for (int i = 0; i < g->nb_sommets; i++)
+        couleurs[i] = 0;
 
-    if (graphColoringUtil(g, m, color, 0) == 0) {
+    if (graph_Coloration(g, m, couleurs, 0) == 0) {
         printf("Solution n'existe pas\n");
         return;
     }
 }
 
 // Lire le fichier et construire le graphe
-void buildGraphFromFile(struct Graph* g, const char* filename) {
+void Construire_Graph(struct Graph* g, const char* filename) {
     FILE *file = fopen(filename, "r");
     if (file == NULL) {
         perror("Erreur lors de l'ouverture du fichier");
@@ -76,47 +71,47 @@ void buildGraphFromFile(struct Graph* g, const char* filename) {
     }
 
     int u, v;
-    int maxVertex = 0;
+    int sommet_max = 0;
     while (fscanf(file, "%d %d", &u, &v) != EOF) {
-        addEdge(g, u, v);
-        if (u > maxVertex) maxVertex = u;
-        if (v > maxVertex) maxVertex = v;
+        ajouter_arrete(g, u, v);
+        if (u > sommet_max) sommet_max = u;
+        if (v > sommet_max) sommet_max = v;
     }
-    g->numVertices = maxVertex + 1;
+    g->nb_sommets = sommet_max + 1;
 
     fclose(file);
 }
 
 // Affichage des stations
-void printStations(int color[], int numVertices) {
-    int stationNumber = 1;
-    int stationFound;
+void affichage_stations(int couleur[], int nb_sommets) {
+    int numero_station = 1;
+    int station_existente;
 
     do {
-        stationFound = 0;
-        printf("Station %d: ", stationNumber);
-        for (int i = 0; i < numVertices; i++) {
-            if (color[i] == stationNumber) {
+        station_existente = 0;
+        printf("Station %d: ", numero_station);
+        for (int i = 0; i < nb_sommets; i++) {
+            if (couleur[i] == numero_station) {
                 printf("%d ", i);
-                stationFound = 1;
+                station_existente = 1;
             }
         }
-        if (stationFound) {
+        if (station_existente) {
             printf("\n");
-            stationNumber++;
+            numero_station++;
         }
-    } while (stationFound);
+    } while (station_existente);
 }
 
 int main() {
     struct Graph g;
-    initGraph(&g, MAX_VERTICES);
+    initGraph(&g, MAX);
 
-    buildGraphFromFile(&g, "welsh.txt"); // Remplacez par le chemin de votre fichier
+    Construire_Graph(&g, "welsh.txt"); // Remplacez par le chemin de votre fichier
 
-    int color[MAX_VERTICES];
-    graphColoring(&g, MAX_VERTICES, color); // Utilisez MAX_VERTICES comme estimation du nombre de couleurs
+    int color[MAX];
+    graphColoring(&g, MAX, color); // Utilisez MAX_VERTICES comme estimation du nombre de couleurs
 
-    printStations(color, g.numVertices);
+    affichage_stations(color, g.nb_sommets);
     return 0;
 }
