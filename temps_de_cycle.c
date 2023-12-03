@@ -155,29 +155,34 @@ void fusiontache(tache *t1, tache *t2)
     t.tailleNum = t1->tailleNum + t2->tailleNum;
     t.numero = calloc(t.tailleNum, sizeof(int));
     printf("test2\n");
+    /*
     if (t.tailleNum == 1)
     {
+        printf("test2.5\n");
         t.numero[0] = t1->numero[0];
+        printf("test2.5\n");
     }
     else
-    {
+    {*/
+        printf("test2.6\n");
         for (int i = 0; i < t1->tailleNum; ++i)
         {
             t.numero[i] = t1->numero[i];
         }
-    }
+    //}
     printf("test3\n");
+        /*
     if (t2->tailleNum == 1)
     {
         t.numero[t1->tailleNum] = t2->numero[0];
     }
     else
-    {
+    {*/
         for (int i = 0; i < t2->tailleNum; ++i)
         {
             t.numero[t1->tailleNum + i] = t2->numero[i];
         }
-    }
+    //}
     printf("test4\n");
     t.temps = t1->temps + t2->temps;
     printf("test5\n");
@@ -261,52 +266,40 @@ void contrainte(listeTache *l1, int *tab, listeTache *l2)
                 // Allocation de mémoire pour la nouvelle tâche dans l2
                 l2->tache[compteur].numero = malloc(l1->tache[i].tailleNum * sizeof(int));
                 l2->tache[compteur].tailleNum = l1->tache[i].tailleNum;
-
-                printf("l1 : %d\n", l1->tache[i].numero[0]);
-                printf("tab : %d\n", tab[j]);
-
                 // Copie des données de la tâche de l1 à l2
                 l2->tache[compteur].numero[0] = l1->tache[i].numero[0];
                 l2->tache[compteur].temps = l1->tache[i].temps;
-
-                printf("compteur : %d\n", compteur);
                 compteur++;
             }
         }
     }
-    afficherTache(l2);
 }
 
 
 
 // fonction qui ajoute une ligne à un tableau entrer en paramètre
 
-void ajouterLigne(int ***tab, int *tailleY ,int *tailleX, listeTache *l)
+// Fonction qui ajoute une ligne à un tableau passé en paramètre
+void ajouterLigne(int ***tab, int *taille,int tailletab, listeTache *l)
 {
-    // Réallocation avec vérification
-    printf("testA\n");
-    int **temp = realloc(*tab, sizeof(int *) * (*tailleY + l->taille));
-    printf("testAB\n");
-    if (temp == NULL)
-    {
-        // Gestion de l'échec de la réallocation
-        printf("Erreur de réallocation de mémoire\n");
-        exit(EXIT_FAILURE);
-    }
-    printf("testB\n");
-    *tab = temp;
-    printf("testC\n");
-    for (int i = 0; i < l->taille; ++i)
-    {
-        if (l->tache[i].tailleNum > *tailleX) *tailleX = l->tache[i].tailleNum;
-    }
-    printf("testD\n");
+    int tailletemp = *taille + l->taille;
+    printf("tailletemp : %d\n", tailletemp);
+        int **temp = realloc(*tab, sizeof(int*) * tailletemp);
+        if (temp == NULL)
+        {
+            // Gestion de l'échec de la réallocation
+            printf("Erreur de réallocation de mémoire\n");
+            exit(EXIT_FAILURE);
+        }
+
+        *tab = temp;
+
     // Copie des nouvelles lignes
     for (int i = 0; i < l->taille; ++i)
     {
-        (*tab)[*tailleY + i] = calloc(sizeof(int) * *tailleX, sizeof(int));
+        (*tab)[*taille + i] = malloc(sizeof(int) * tailletab);
 
-        if ((*tab)[*tailleY + i] == NULL)
+        if ((*tab)[*taille + i] == NULL)
         {
             // Gestion de l'échec de la réallocation
             printf("Erreur de réallocation de mémoire\n");
@@ -315,46 +308,59 @@ void ajouterLigne(int ***tab, int *tailleY ,int *tailleX, listeTache *l)
 
         for (int j = 0; j < l->tache[i].tailleNum; ++j)
         {
-            (*tab)[*tailleY + i][j] = l->tache[i].numero[j];
+            (*tab)[*taille + i][j] = l->tache[i].numero[j];
         }
     }
 
-    *tailleY += l->taille;
+    *taille += l->taille;
 }
 
 void initilisationtempscycle(tableauMemoire *tab)
 
 {
-    int **tab2 = NULL;
+    int **tab2 = malloc(sizeof(int*));
     int taille2 = 0;
-    int taille3 = 0;
-    listeTache liste;
-    listeTache liste2;
+    listeTache liste = {NULL, 0};
+    listeTache liste2 = {NULL, 0};
     printf("test\n");
     remplirTache(&liste, "../operation/operations.txt");
     printf("test\n");
    //afficherTache(&liste);
     for (int i = 0; i < tab->nombreMachines; ++i)
     {
-        contrainte(&liste , tab->tableauPrecedences[i] , &liste2);
-        printf("test\n");
-        printf("\n");
-        //afficherTache(&liste2);
-        printf("Temps de cycle : %d\n", remplir_temps_de_cycle("../temps/temps_cycle.txt"));
-        tempsdecycle(&liste2, remplir_temps_de_cycle("../temps/temps_cycle.txt"));
-        printf("test7\n");
-        //afficherTache(&liste2);
-        ajouterLigne(&tab2, &taille2,&taille3, &liste2);
-        for (int i = 0; i < taille2; ++i)
-        {
-            printf("-");
-            for ( int j = 0; j < taille3; ++j)
-            {
-                printf("|%d|", tab2[i][j]);
-            }
+            contrainte(&liste , tab->tableauPrecedences[i] , &liste2);
+            printf("test\n");
             printf("\n");
+            //afficherTache(&liste2);
+            //printf("Temps de cycle : %d\n", remplir_temps_de_cycle("../temps/temps_cycle.txt"));
+            printf("test6\n");
+            tempsdecycle(&liste2, remplir_temps_de_cycle("../temps/temps_cycle.txt"));
+            printf("test7\n");
+            afficherTache(&liste2);
+            ajouterLigne(&tab2, &taille2,tab->nombreTaches, &liste2);
+            for (int i = 0; i < taille2; ++i)
+            {
+                printf("-");
+                for ( int j = 0; j < tab->nombreTaches; ++j)
+                {
+                    printf("|%d|", tab2[i][j]);
+                }
+                printf("\n");
+            }
+            printf("test8\n");
+            printf("test9\n");
+            liste2 = (listeTache) {NULL, 0};
+    }
+
+    tab->tableauPrecedences = tab2;
+    tab->nombreMachines = taille2;
+    tab->nombreTaches = 0;
+    for(int i = 0; i < tab->nombreMachines; i++){
+        int compteur = 0;
+        while(tab->tableauPrecedences[i][compteur] != 0){
+            compteur++;
         }
-        printf("test8\n");
+        if (compteur > tab->nombreTaches)tab->nombreTaches = compteur;
     }
     // affiche le tableau
     printf("\n");

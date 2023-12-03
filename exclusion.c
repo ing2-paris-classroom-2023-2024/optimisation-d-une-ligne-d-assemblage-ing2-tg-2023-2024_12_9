@@ -103,7 +103,7 @@ void affichage_stations(int couleur[], int nb_sommets) {
     } while (station_existente);
 }
 
-int main() {
+/*int main() {
     struct Graph g;
     initGraph(&g, MAX);
 
@@ -114,4 +114,4 @@ int main() {
 
     affichage_stations(color, g.nb_sommets);
     return 0;
-}
+}*/

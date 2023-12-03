@@ -17,22 +17,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="création structure projet">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_11_2023_17_55__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_11_2023_17_55__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_24_11_2023_16_26__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_24_11_2023_16_26__Changes_.xml" afterDir="false" />
+    <list default="true" id="8e5b429c-28ab-4103-8d96-04f66666c8d1" name="Changes" comment="adaptation pour fusion">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_11_2023_17_55_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_25_11_2023_17_55__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/exclusion.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/exclusion.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/precedence.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/precedence.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/structure.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/structure.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/temps_de_cycle.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/optimisation_d_une_ligne_d_assemblage_td12_grp9.dir/temps_de_cycle.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/optimisation_d_une_ligne_d_assemblage_td12_grp9.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/optimisation_d_une_ligne_d_assemblage_td12_grp9.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exclusion.c" beforeDir="false" afterPath="$PROJECT_DIR$/exclusion.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/temps_de_cycle.c" beforeDir="false" afterPath="$PROJECT_DIR$/temps_de_cycle.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temps_de_cycle.h" beforeDir="false" afterPath="$PROJECT_DIR$/temps_de_cycle.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +41,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -95,6 +90,7 @@
       <workItem from="1700411257124" duration="424000" />
       <workItem from="1701451569574" duration="7753000" />
       <workItem from="1701534174785" duration="3000" />
+      <workItem from="1701601964437" duration="3812000" />
     </task>
     <task id="LOCAL-00001" summary="création du projet">
       <created>1700411412480</created>
@@ -124,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700411672943</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adaptation pour fusion">
+      <created>1701543202424</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701543202424</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +148,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="création du projet" />
     <MESSAGE value="création structure projet" />
-    <option name="LAST_COMMIT_MESSAGE" value="création structure projet" />
+    <MESSAGE value="adaptation pour fusion" />
+    <option name="LAST_COMMIT_MESSAGE" value="adaptation pour fusion" />
   </component>
 </project>
