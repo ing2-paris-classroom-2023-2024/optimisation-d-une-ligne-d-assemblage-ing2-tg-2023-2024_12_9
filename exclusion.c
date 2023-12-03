@@ -69,7 +69,6 @@ void Construire_Graph(struct Graph* g, const char* filename) {
         if (v > sommet_max) sommet_max = v;
     }
     g->nb_sommets = 31;
-
     fclose(file);
 }
 
@@ -118,7 +117,6 @@ void affichage_stations(int couleur[], int nb_sommets , int ***tab) {
         }
         printf("\n");
     }
-
 }
 
 

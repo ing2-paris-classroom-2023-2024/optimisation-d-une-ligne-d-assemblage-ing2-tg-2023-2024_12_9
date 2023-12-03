@@ -96,13 +96,6 @@ int main() {
         printf("\n");
     }*/
     // affiche la matrice
-    for (int i = 0; i < MAX; i++) {
-        printf("-");
-        for (int j = 0; j < MAX; j++) {
-            printf("%d", g.Matrice[i][j]);
-        }
-        printf("\n");
-    }
     /*
     for (int i = 0; i < g.nb_sommets; ++i) {
         free(tab[i]);
