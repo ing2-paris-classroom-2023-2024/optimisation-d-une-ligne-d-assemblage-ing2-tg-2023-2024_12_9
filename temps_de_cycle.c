@@ -292,7 +292,7 @@ void ajouterLigne(int ***tab, int *taille,int tailletab, listeTache *l)
     // Copie des nouvelles lignes
     for (int i = 0; i < l->taille; ++i)
     {
-        (*tab)[*taille + i] = malloc(sizeof(int) * tailletab);
+        (*tab)[*taille + i] = calloc(tailletab, sizeof(int));
 
         if ((*tab)[*taille + i] == NULL)
         {
@@ -353,12 +353,18 @@ void initilisationtempscycle(tableauMemoire *tab)
             }
         }
     }
+    // free du tableau précédence
+    for (int i = 0; i < tab->nombreMachines; i++)
+    {
+        free(tab->tableauPrecedences[i]);
+    }
+    free(tab->tableauPrecedences);
     tab->tableauPrecedences = tab2;
     tab->nombreMachines = taille2;
     tab->nombreTaches = 0;
     for(int i = 0; i < tab->nombreMachines; i++){
         int compteur = 0;
-        while(tab->tableauPrecedences[i][compteur] != 0){
+        while(tab2[i][compteur] != 0){
             compteur++;
         }
         if (compteur > tab->nombreTaches)tab->nombreTaches = compteur;
@@ -369,7 +375,6 @@ void initilisationtempscycle(tableauMemoire *tab)
     {
         if (liste.tache[i].numero != NULL && liste.tache[i].tailleNum != 0)
         {
-            printf("test\n");
             free(liste.tache[i].numero);
             liste.tache[i].numero = NULL;
         }

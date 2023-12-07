@@ -1,6 +1,23 @@
 
 #include "exclusion.h"
 
+void triInsertionint(int *tab, int taille)
+{
+    int i, j;
+    int temp;
+    for (i = 1; i < taille; i++)
+    {
+        temp = tab[i];
+        j = i - 1;
+        while (j >= 0 && tab[j] < temp)
+        {
+            tab[j + 1] = tab[j];
+            j--;
+        }
+        tab[j + 1] = temp;
+    }
+}
+
 // Initialiser le graphe
 void initGraph(struct Graph* g, int nb_sommet) {
     g->nb_sommets = nb_sommet;
@@ -90,15 +107,174 @@ void Construire_Graph(struct Graph* g, const char* filename) {
         }
     }
     // Fin de la partie faite par Mateo
-    g->nb_sommets = sommet_max;
-
-
-
+    g->nb_sommets = sommet_max + 1;
     fclose(file);
 }
 
+// Fonction qui ajoute une ligne à un tableau passé en paramètre
+void ajouterl(int ***tab, int *tailleY,int tailleX, int ***tab2 , int *tailleY2, int tailleX2)
+{
+    int tailletemp = *tailleY + *tailleY2;
+    int **temp = realloc(*tab, sizeof(int*) * tailletemp);
+    if (temp == NULL)
+    {
+        // Gestion de l'échec de la réallocation
+        printf("Erreur de réallocation de mémoire\n");
+        exit(EXIT_FAILURE);
+    }
+
+    *tab = temp;
+
+    // Copie des nouvelles lignes
+    for (int i = 0; i < *tailleY2; ++i)
+    {
+        (*tab)[*tailleY + i] = calloc(tailleX, sizeof(int));
+
+        if ((*tab)[*tailleY + i] == NULL)
+        {
+            // Gestion de l'échec de la réallocation
+            printf("Erreur de réallocation de mémoire\n");
+            exit(EXIT_FAILURE);
+        }
+
+        for (int j = 0; j < tailleX; ++j)
+        {
+            (*tab)[*tailleY + i][j] = (*tab2)[i][j];
+        }
+    }
+
+    *tailleY += *tailleY2;
+}
+void remplirmem(tableauMemoire *tab, char *nomFichier)
+{
+    FILE *fichier = fopen(nomFichier, "r");
+
+    if (fichier == NULL)
+    {
+        printf("Erreur lors de l'ouverture du fichier\n");
+        exit(EXIT_FAILURE);
+    }
+
+    // Compter le nombre de lignes
+    int taille = 0;
+    int numero;
+    float temps;
+
+    while (fscanf(fichier, "%d %f", &numero, &temps) == 2)
+    {
+        taille++;
+    }
+
+    fseek(fichier, 0, SEEK_SET);
+
+    // Allocation dynamique pour le tableau de tâches
+    int **tabtemps = malloc(sizeof(int*));
+    tabtemps[0] = malloc(taille * sizeof(int*));
+    tab->nombreTaches = taille;
+    tab->nombreMachines = 1;
+    // Lire les données avec fscanf
+    for (int i = 0; i < taille; ++i)
+    {
+        if (fscanf(fichier, "%d %f", &numero, &temps) == 2)
+        {
+             tabtemps[0][i] = numero;
+        }
+        else
+        {
+            // Gestion d'une erreur de lecture
+            printf("Erreur lors de la lecture des données du fichier\n");
+            // Vous pouvez choisir de quitter la fonction ou de gérer autrement l'erreur.
+            exit(EXIT_FAILURE);
+        }
+    }
+    tab->tableauPrecedences = tabtemps;
+    fclose(fichier);
+}
+int verifmmC(tableauMemoire *tab, int couleur[])
+{
+    int test = 1;
+    int index = 0, taille = 0;
+    int **tab2 = malloc(sizeof(int*));
+    if (tab->tableauPrecedences == NULL)
+    {
+        remplirmem(tab, "../operation/operations.txt");
+    }
+    int tabtemps[tab->nombreTaches];
+    for (int k = 0; k < tab->nombreMachines; k++)
+    {
+        index = 0;
+        for (int i = 0; i < tab->nombreTaches; i++)
+        {
+            tabtemps[i] = -1;
+        }
+
+        for (int i = 0; i < tab->nombreTaches; i++)
+        {
+            for (int j = 0; j <tab->nombreTaches; ++j)
+            {
+                //printf(" %d", tab->tableauPrecedences[2][j]);
+                if ((couleur[tab->tableauPrecedences[k][i]] == tabtemps[j]) && (tab->tableauPrecedences[k][i] != 0))
+                {
+                    test = 0;
+                }
+            }
+            if (test && (tab->tableauPrecedences[k][i] != 0))
+            {
+                tabtemps[index] = couleur[tab->tableauPrecedences[k][i]];
+                index++;
+            }
+            test = 1;
+        }
+        int **tabtemps2 = calloc(index, sizeof(int*));
+        for (int i = 0; i < index; i++)
+        {
+            tabtemps2[i] = calloc(tab->nombreTaches, sizeof(int));
+        }
+        index = 0;
+        while (tabtemps[index] != -1)
+        {
+            for (int i = 0; i < tab->nombreTaches; i++)
+            {
+                if (tabtemps[index] == couleur[tab->tableauPrecedences[k][i]])
+                {
+                    tabtemps2[index][i] = tab->tableauPrecedences[k][i];
+                }
+            }
+            index++;
+        }
+        ajouterl(&tab2, &taille, tab->nombreTaches, &tabtemps2, &index, tab->nombreTaches);
+        // free du tableau de temps 2
+        for (int i = 0; i < index; i++)
+        {
+            free(tabtemps2[i]);
+        }
+        free(tabtemps2);
+    }
+    for (int i = 0; i < taille; i++)
+    {
+        triInsertionint(tab2[i], tab->nombreTaches);
+    }
+    // free du tableau précédence
+    for (int i = 0; i < tab->nombreMachines; i++)
+    {
+        free(tab->tableauPrecedences[i]);
+    }
+    free(tab->tableauPrecedences);
+    tab->tableauPrecedences = tab2;
+    tab->nombreMachines = taille;
+    tab->nombreTaches = 0;
+    for(int i = 0; i < tab->nombreMachines; i++){
+        int compteur = 0;
+        while(tab->tableauPrecedences[i][compteur] != 0){
+            compteur++;
+        }
+        if (compteur > tab->nombreTaches)tab->nombreTaches = compteur+1;
+    }
+    return 0;
+}
+
 // Affichage des stations
-void affichage_stations(int couleur[], int nb_sommets , int ***tab , int *nX , int *nY) {
+void affichage_stations(int couleur[], int nb_sommets) {
     int numero_station = 1;
     int compteur = 0;
     int station_existente;
@@ -111,39 +287,13 @@ void affichage_stations(int couleur[], int nb_sommets , int ***tab , int *nX , i
                 station_existente = 1;
             }
         }
-        printf("station existante : %d\n", station_existente);
         if (station_existente) {
             printf("\n");
             numero_station++;
         }
         compteur++;
     } while (station_existente);
-    numero_station = 1;
-    *tab = calloc(compteur, sizeof(int*));
-    for (int i = 0; i < compteur; i++) {
-        (*tab)[i] = calloc(nb_sommets, sizeof(int));
-    }
-    do {
-        station_existente = 0;
-        for (int i = 0; i < nb_sommets; i++) {
-            if (couleur[i] == numero_station) {
-                station_existente = 1;
-                (*tab)[numero_station - 1][i] = i;
-            }
-        }
-        if (station_existente){
-            numero_station++;
-        }
-    } while (station_existente);
-    // affichage couleur
-    for (int i = 0; i < compteur; i++) {
-        for (int j = 0; j < nb_sommets; j++) {
-            printf("%d ", (*tab)[i][j]);
-        }
-        printf("\n");
-    }
-    *nX = compteur;
-    *nY = nb_sommets;
+
 }
 
 

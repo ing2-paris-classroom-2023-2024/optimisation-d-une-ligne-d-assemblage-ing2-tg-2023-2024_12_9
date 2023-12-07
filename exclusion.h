@@ -19,5 +19,6 @@ struct Graph {
 void initGraph(struct Graph* g, int nb_sommet);
 void Construire_Graph(struct Graph* g, const char* filename);
 void graphColoring(struct Graph* g, int m, int couleurs[]);
-void affichage_stations(int couleur[], int nb_sommets , int ***tab , int *nX , int *nY);
+void affichage_stations(int couleur[], int nb_sommets);
+int verifmmC(tableauMemoire *tab, int couleur[]);
 #endif //OPTIMISATION_D_UNE_LIGNE_D_ASSEMBLAGE_TD12_GRP9_EXCLUSION_H

@@ -71,12 +71,6 @@ typedef struct tableauMemoire{
     int ** tableauPrecedences;
 }tableauMemoire;
 
-typedef struct tableauC{
-    int nX;
-    int nY;
-    int ** tableauC;
-}tableauC;
-
 typedef struct Liste{
     int longueur;
     struct Maillon * tete;

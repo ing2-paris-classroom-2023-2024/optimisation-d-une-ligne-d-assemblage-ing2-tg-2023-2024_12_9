@@ -22,7 +22,7 @@ int menu_de_lancement()
     switch (choix)
     {
         case 1:
-            printf("Vous avez choisi la contrainte d'exclusion et de précédence\n");
+            printf("Vous avez choisi la contrainte d'exclusion et de precedence\n");
             return 1;
             break;
         case 2:
@@ -30,7 +30,7 @@ int menu_de_lancement()
             return 2;
             break;
         case 3:
-            printf("Vous avez choisi la contrainte de précédence et temps de cycle et contrainte d'exclusion\n");
+            printf("Vous avez choisi la contrainte de precedence et temps de cycle et contrainte d'exclusion\n");
             return 3;
             break;
         case 4:
